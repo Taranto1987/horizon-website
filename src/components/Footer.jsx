@@ -1,6 +1,6 @@
 export default function Footer() {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5522992410112', '_blank');
+    window.open('https://wa.me/552233437720', '_blank');
   };
 
   const footerStyles = {
@@ -56,7 +56,7 @@ export default function Footer() {
               e.currentTarget.style.transform = 'scale(1)';
             }}
           >
-            <span>📞 WhatsApp: (22) 99241-0112</span>
+            <span>📞 Telefone: (22) 3343-7720</span>
           </div>
           
           <div style={itemStyles}>
@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
           
           <div style={itemStyles}>
-            <span>🔧 Desenvolvido por Thalles Taranto – Taranto Ads Pro</span>
+            <span>🔧 Hostin Horizon por Thalles Taranto – Taranto Ads Pro</span>
           </div>
         </div>
       </footer>
