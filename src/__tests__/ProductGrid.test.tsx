@@ -22,11 +22,14 @@ describe('ProductGrid', () => {
     expect(screen.getByText('Kit Castor Completo')).toBeInTheDocument()
   })
 
-  it('displays "Consultar preço" for all products', () => {
+  it('displays product descriptions', () => {
     render(<ProductGrid />)
     
-    const priceElements = screen.getAllByText('Consultar preço')
-    expect(priceElements).toHaveLength(4) // 4 produtos
+    // Verifica se as descrições são mostradas ao invés de "Consultar preço"
+    expect(screen.getByText('Produto de alta qualidade da linha premium')).toBeInTheDocument()
+    expect(screen.getByText('Nosso produto tradicional de confiança')).toBeInTheDocument()
+    expect(screen.getByText('Qualidade Castor com preço acessível')).toBeInTheDocument()
+    expect(screen.getByText('Kit completo com todos os produtos essenciais')).toBeInTheDocument()
   })
 
   it('shows "Consultar Preço" buttons for all products', () => {
@@ -47,10 +50,9 @@ describe('ProductGrid', () => {
       '_blank'
     )
     
-    expect(window.open).toHaveBeenCalledWith(
-      expect.stringContaining('Produto Castor Premium'),
-      '_blank'
-    )
+    const callArgs = (window.open as jest.Mock).mock.calls[0]
+    const decodedUrl = decodeURIComponent(callArgs[0])
+    expect(decodedUrl).toContain('Produto Castor Premium')
   })
 
   it('has proper product structure', () => {
@@ -66,7 +68,8 @@ describe('ProductGrid', () => {
   it('applies correct CSS classes', () => {
     render(<ProductGrid />)
     
-    const gridContainer = screen.getByRole('generic')
-    expect(gridContainer).toHaveClass('grid', 'grid-cols-1', 'md:grid-cols-2', 'lg:grid-cols-3', 'gap-6')
+    // Get the grid container by its specific class
+    const gridContainer = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3.gap-6')
+    expect(gridContainer).toBeInTheDocument()
   })
 })

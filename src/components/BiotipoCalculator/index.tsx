@@ -1,13 +1,28 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { biotipoQuestions, getBiotipoResult, type BiotipoQuestion } from './calculatorData'
+import { trackCalculatorStart, trackCalculatorComplete, trackWhatsAppClick } from '@/lib/gtag'
 
 export default function BiotipoCalculator() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState<Record<string, number>>({})
   const [result, setResult] = useState<string | null>(null)
   const [showResult, setShowResult] = useState(false)
+  const [hasStarted, setHasStarted] = useState(false)
+
+  // Track calculator start on first interaction
+  useEffect(() => {
+    if (!hasStarted && currentQuestion === 0 && Object.keys(answers).length === 0) {
+      // Only track on first render, not on reset
+      const timer = setTimeout(() => {
+        trackCalculatorStart()
+        setHasStarted(true)
+      }, 1000)
+      
+      return () => clearTimeout(timer)
+    }
+  }, [hasStarted, currentQuestion, answers])
 
   const handleAnswer = (questionId: string, points: number) => {
     const newAnswers = { ...answers, [questionId]: points }
@@ -21,6 +36,9 @@ export default function BiotipoCalculator() {
       const biotipoResult = getBiotipoResult(totalPoints)
       setResult(biotipoResult)
       setShowResult(true)
+      
+      // Track completion
+      trackCalculatorComplete(biotipoResult.split(' ')[0]) // Extract just "Ectomorfo", "Mesomorfo", or "Endomorfo"
     }
   }
 
@@ -29,12 +47,17 @@ export default function BiotipoCalculator() {
     setAnswers({})
     setResult(null)
     setShowResult(false)
+    // Don't reset hasStarted so we don't track start again
   }
 
   const shareResult = () => {
-    const message = `Meu biotipo é: ${result}. Calculado na Loja Castor Cabo Frio!`
-    const whatsappUrl = `https://wa.me/5522999999999?text=${encodeURIComponent(message)}`
-    window.open(whatsappUrl, '_blank')
+    if (result) {
+      trackWhatsAppClick(result, 'calculator_share')
+      
+      const message = `Meu biotipo é: ${result}. Calculado na Loja Castor Cabo Frio!`
+      const whatsappUrl = `https://wa.me/5522999999999?text=${encodeURIComponent(message)}`
+      window.open(whatsappUrl, '_blank')
+    }
   }
 
   if (showResult && result) {

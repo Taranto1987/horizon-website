@@ -2,9 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    appDir: true,
-  },
   images: {
     domains: ['localhost', 'www.lojacastorcabofrio.com.br'],
     formats: ['image/webp', 'image/avif'],

@@ -1,9 +1,16 @@
 'use client'
 
 import { castorProducts } from './BiotipoCalculator/calculatorData'
+import { trackWhatsAppClick, trackProductView } from '@/lib/gtag'
 
 export default function ProductGrid() {
   const handlePriceInquiry = (productName: string) => {
+    // Track product view
+    trackProductView(productName)
+    
+    // Track WhatsApp click
+    trackWhatsAppClick(productName, 'product_grid')
+    
     // WhatsApp integration - opens WhatsApp with pre-filled message
     const message = `Olá! Gostaria de consultar o preço do produto: ${productName}`
     const whatsappUrl = `https://wa.me/5522999999999?text=${encodeURIComponent(message)}`
@@ -18,7 +25,7 @@ export default function ProductGrid() {
             {product.name}
           </h3>
           <p className="text-gray-600 mb-4">
-            {product.price}
+            {product.description || product.price}
           </p>
           <button
             onClick={() => handlePriceInquiry(product.name)}

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import GoogleAnalytics from '@/components/Analytics/GoogleAnalytics'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+// Use system fonts as fallback since network access may be limited
 
 export const metadata: Metadata = {
   title: 'Loja Castor Cabo Frio - Produtos de Qualidade',
@@ -44,7 +44,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
+      <body className="font-sans">
+        <GoogleAnalytics />
         <div id="root">
           {children}
         </div>

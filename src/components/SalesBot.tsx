@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { trackChatBotInteraction, trackWhatsAppClick } from '@/lib/gtag'
 
 export default function SalesBot() {
   const [isOpen, setIsOpen] = useState(false)
@@ -9,8 +10,19 @@ export default function SalesBot() {
   ])
   const [inputMessage, setInputMessage] = useState('')
 
+  const toggleChat = () => {
+    const newIsOpen = !isOpen
+    setIsOpen(newIsOpen)
+    
+    if (newIsOpen) {
+      trackChatBotInteraction('open')
+    }
+  }
+
   const handleSendMessage = () => {
     if (!inputMessage.trim()) return
+
+    trackChatBotInteraction('message_sent')
 
     const newMessages = [...messages, { type: 'user', text: inputMessage }]
     
@@ -31,6 +43,9 @@ export default function SalesBot() {
   }
 
   const openWhatsApp = () => {
+    trackChatBotInteraction('whatsapp_redirect')
+    trackWhatsAppClick(undefined, 'chat_bot')
+    
     const message = 'Olá! Vim através do site da Loja Castor Cabo Frio.'
     const whatsappUrl = `https://wa.me/5522999999999?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
@@ -40,7 +55,7 @@ export default function SalesBot() {
     <div className="relative">
       {/* Chat Button */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={toggleChat}
         className="fixed bottom-6 right-6 bg-castor-brown text-white p-4 rounded-full shadow-lg hover:bg-castor-brown/90 transition-colors z-50"
       >
         💬
