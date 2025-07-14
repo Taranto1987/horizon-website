@@ -369,6 +369,38 @@ UPTIME_ROBOT_API_KEY=sua-chave-aqui
 3. Vá em Settings > Environment Variables
 4. Adicione cada variável conforme ambiente
 
+### 🔐 GitHub Secrets (Obrigatórios para Deploy Automático)
+
+Para o deploy automático funcionar, configure estas secrets no GitHub:
+
+**Caminho**: Repositório → Settings → Secrets and variables → Actions
+
+| Secret | Onde Encontrar | Obrigatório |
+|--------|----------------|-------------|
+| `VERCEL_TOKEN` | Vercel Dashboard → Settings → Tokens | ✅ |
+| `VERCEL_ORG_ID` | Vercel CLI: `npx vercel link` | ✅ |
+| `VERCEL_PROJECT_ID` | Vercel CLI: `npx vercel link` | ✅ |
+| `GA_ID` | Google Analytics dashboard | ⚠️ |
+| `SLACK_WEBHOOK_URL` | Slack App settings | ⚠️ |
+| `SNYK_TOKEN` | Snyk dashboard | ⚠️ |
+
+**Como obter**:
+```bash
+# 1. Instale Vercel CLI
+npm i -g vercel
+
+# 2. Faça login
+npx vercel login
+
+# 3. Link o projeto (isso gera os IDs)
+npx vercel link
+
+# 4. Copie os IDs do arquivo .vercel/project.json
+cat .vercel/project.json
+```
+
+**⚠️ Erro comum**: `No deployment found` = IDs incorretos ou projeto não linked
+
 ### Segurança
 - ❌ **NUNCA** commite `.env.local`
 - ✅ Use `NEXT_PUBLIC_` apenas para variáveis públicas
@@ -416,29 +448,170 @@ UPTIME_ROBOT_API_KEY=sua-chave-aqui
 
 ### Problemas Comuns
 
-#### Build Falha
+#### 🚨 Deploy Falha na Vercel
+
+**Sintomas**: Deploy fails, build errors, timeout errors
+
+**Soluções**:
+
+1. **Verificar Secrets do GitHub**:
+   ```
+   Settings → Secrets and variables → Actions
+   
+   Variáveis obrigatórias:
+   - VERCEL_TOKEN
+   - VERCEL_ORG_ID  
+   - VERCEL_PROJECT_ID
+   - GA_ID (opcional)
+   ```
+
+2. **Limpar Build Cache**:
+   ```bash
+   # Local
+   rm -rf .next node_modules package-lock.json
+   npm install
+   npm run build
+   
+   # No Vercel Dashboard: Settings → Functions → Clear Build Cache
+   ```
+
+3. **Verificar Logs Detalhados**:
+   ```bash
+   # Ver logs completos no Vercel CLI
+   npx vercel logs [deployment-url] --follow
+   
+   # Ou acesse: https://vercel.com/dashboard → Project → Deployments → View Logs
+   ```
+
+4. **Forçar Novo Deploy**:
+   ```bash
+   # Via CLI
+   npx vercel --prod --force
+   
+   # Via GitHub: Rerun failed workflow
+   ```
+
+5. **Verificar vercel.json**:
+   - Deve estar no formato correto para Next.js 14
+   - Sem conflitos de configuração
+
+#### ❌ Build Falha Local
+
 ```bash
+# Diagnóstico completo
+npm run lint          # Verificar código
+npm run type-check     # Verificar TypeScript  
+npm run test          # Verificar testes
+npm run build         # Verificar build
+
 # Limpar cache
-rm -rf .next node_modules
+rm -rf .next node_modules package-lock.json
 npm install
 npm run build
 ```
 
-#### Erro de Tipo TypeScript
+#### 🔗 WhatsApp não Funciona
+1. Verificar número no código (src/components/)
+2. Testar links manualmente
+3. Verificar encoding de mensagens
+
+#### 📊 Analytics não Tracking
+1. Verificar GA_ID nas variáveis de ambiente
+2. Verificar script no layout.tsx
+3. Testar em aba anônima
+
+#### 🌐 Domínio não Funciona
+1. Verificar DNS no Vercel Dashboard
+2. Aguardar propagação (até 48h)
+3. Verificar SSL no dashboard
+
+### 🛠️ Comandos de Diagnóstico
+
 ```bash
-# Verificar tipos
-npm run type-check
+# Status geral do projeto
+npm run build && echo "✅ Build OK" || echo "❌ Build FAILED"
+npm run test && echo "✅ Tests OK" || echo "❌ Tests FAILED"  
+npm run lint && echo "✅ Lint OK" || echo "❌ Lint FAILED"
+
+# Verificar dependências
+npm audit
+npm outdated
+
+# Testar deploy local
+npm run start
+# Teste: http://localhost:3000
+
+# Backup antes de mudanças importantes
+npm run backup
+
+# Monitoramento pós-deploy
+npm run post-deploy
 ```
 
-#### Deploy não Funciona
-1. Verificar variáveis de ambiente no Vercel
-2. Checar logs de build no dashboard
-3. Verificar se todas as dependências estão corretas
+### 📞 Contatos de Emergência
 
-### Contatos de Emergência
-- **Vercel Support**: [Link de suporte]
-- **GitHub Issues**: [Link do repositório]
-- **Desenvolvedor Principal**: [Contato]
+| Problema | Contato | Ação |
+|----------|---------|------|
+| Deploy falha | Rerun GitHub Action | Verificar logs |
+| Site fora do ar | Vercel Dashboard | Status/Rollback |
+| Erro crítico | GitHub Issues | Bug report |
+| Dúvidas código | README + Docs | Consultar seção específica |
+
+### 🔄 Procedimento de Rollback
+
+Em caso de deploy com problemas:
+
+1. **GitHub Actions** (Automático):
+   ```yaml
+   # Já configurado no workflow deploy.yml
+   - name: Rollback on failure
+     if: failure()
+     uses: amondnet/vercel-action@v25
+   ```
+
+2. **Manual via Vercel**:
+   - Dashboard → Deployments → Previous → "Promote to Production"
+
+3. **Via CLI**:
+   ```bash
+   npx vercel rollback [deployment-url]
+   ```
+
+### 📋 Checklist de Troubleshooting
+
+**Antes de abrir issue**:
+- [ ] Testei `npm run build` local
+- [ ] Verifiquei logs do Vercel
+- [ ] Confirmei variáveis de ambiente
+- [ ] Testei em incógnito
+- [ ] Limpei cache/node_modules
+- [ ] Consultei esta seção
+
+**Para deploy issues**:
+- [ ] GitHub Secrets configurados
+- [ ] Workflow permissions habilitadas  
+- [ ] Vercel project connected
+- [ ] DNS configurado (se custom domain)
+- [ ] No rate limit na Vercel
+
+### 🚨 Logs de Error Comuns
+
+```
+Error: Cannot find module 'next'
+→ npm install
+
+Error: Type errors in production build
+→ npm run type-check && fix errors
+
+Error: Vercel deployment timeout
+→ Check build performance, reduce bundle size
+
+Error: Environment variable not found
+→ Add to Vercel Dashboard → Settings → Environment Variables
+
+Error: API route not working
+→ Check src/app/api/ structure and exports
+```
 
 ---
 
