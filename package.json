@@ -1,0 +1,24 @@
+{
+  "name": "horizon-website",
+  "version": "1.0.0",
+  "description": "Horizon Website - Loja Castor Cabo Frio",
+  "main": "src/index.jsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "serve -s dist"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.3.0",
+    "serve": "^14.2.0"
+  },
+  "keywords": ["react", "vite", "loja", "castor", "cabo-frio"],
+  "author": "Thalles Taranto",
+  "license": "MIT"
+}
