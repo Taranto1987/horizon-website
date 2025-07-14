@@ -1,0 +1,65 @@
+{
+  "name": "castor-cabo-frio",
+  "version": "1.0.0",
+  "description": "E-commerce website for Loja Castor Cabo Frio",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "export:products": "node scripts/export-products.js",
+    "import:products": "node scripts/import-products.js",
+    "backup": "node scripts/backup.js",
+    "restore": "node scripts/restore.js",
+    "lighthouse": "node scripts/lighthouse-check.js",
+    "deploy": "vercel --prod",
+    "deploy:preview": "vercel"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@next/font": "^14.0.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.294.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.0.0",
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "jest": "^29.0.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "jest-environment-jsdom": "^29.0.0"
+  },
+  "keywords": [
+    "ecommerce",
+    "castor",
+    "cabo-frio",
+    "next.js",
+    "react",
+    "typescript",
+    "tailwind"
+  ],
+  "author": "Loja Castor Cabo Frio",
+  "license": "MIT",
+  "homepage": "https://www.lojacastorcabofrio.com.br",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Taranto1987/horizon-website.git"
+  }
+}
