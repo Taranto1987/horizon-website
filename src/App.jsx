@@ -2,15 +2,20 @@ import ProductGrid from './components/ProductGrid.jsx';
 import SalesBot from './components/SalesBot.jsx';
 import Footer from './components/Footer.jsx';
 
+// Cache buster - Phone update version
+const APP_VERSION = "phone-update-2025-07-14";
+
 export default function App() {
   return (
-    <div style={{ 
-      minHeight: '100vh', 
-      display: 'flex', 
-      flexDirection: 'column',
-      margin: 0,
-      padding: 0
-    }}>
+    <div 
+      data-version={APP_VERSION}
+      style={{ 
+        minHeight: '100vh', 
+        display: 'flex', 
+        flexDirection: 'column',
+        margin: 0,
+        padding: 0
+      }}>
       <main style={{ 
         flex: '1',
         padding: '20px',

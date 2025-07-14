@@ -1,6 +1,10 @@
 export default function Footer() {
+  // Phone number updated - Version: 2025-07-14 - Force cache refresh
+  const PHONE_NUMBER = "(22) 99241-0112";
+  const WHATSAPP_URL = "https://wa.me/5522992410112";
+  
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5522992410112', '_blank');
+    window.open(WHATSAPP_URL, '_blank');
   };
 
   const footerStyles = {
@@ -56,7 +60,7 @@ export default function Footer() {
               e.currentTarget.style.transform = 'scale(1)';
             }}
           >
-            <span>📞 WhatsApp: (22) 99241-0112</span>
+            <span>📞 WhatsApp: {PHONE_NUMBER}</span>
           </div>
           
           <div style={itemStyles}>

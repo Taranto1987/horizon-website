@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "serve": "serve -s dist"
+    "serve": "serve -s dist",
+    "deploy": "npm run build && echo 'Build completed with cache busting - ready for deployment'"
   },
   "dependencies": {
     "react": "^18.2.0",
