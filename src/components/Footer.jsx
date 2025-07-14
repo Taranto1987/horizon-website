@@ -71,7 +71,7 @@ export default function Footer() {
             <span>💬 Instagram: @castorcabofrio</span>
           </div>
           
-          <div style={itemStyles}>
+          <div style={{...itemStyles, marginTop: '8px', fontWeight: 'bold'}}>
             <span>🔧 Desenvolvido por Thalles Taranto – Taranto Ads Pro</span>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import ProductGrid from './components/ProductGrid.jsx';
 import SalesBot from './components/SalesBot.jsx';
 import Footer from './components/Footer.jsx';
+import Castorzinho from './components/Castorzinho.jsx';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <SalesBot />
       </main>
       <Footer />
+      <Castorzinho />
       
       <style jsx global>{`
         * {
