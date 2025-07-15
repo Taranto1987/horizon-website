@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
           
           <div style={itemStyles}>
-            <span>🔧 Desenvolvido por Thalles Taranto – Taranto Ads Pro</span>
+            <span>🔧 Desenvolvido por Tarântto ADS Pro</span>
           </div>
         </div>
       </footer>
