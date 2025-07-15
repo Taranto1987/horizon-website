@@ -1,6 +1,6 @@
 {
   "name": "horizon-website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Horizon Website - Loja Castor Cabo Frio",
   "main": "src/index.jsx",
   "scripts": {
