@@ -1,11 +1,9 @@
-name: 🧠 Codex Autopilot
+name: 🚀 Codex Autopilot
 
 on:
   push:
     branches:
       - main
-  schedule:
-    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
@@ -13,29 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🛎️ Checkout código
+      - name: ✅ Checkout código
         uses: actions/checkout@v3
 
-      - name: 🧠 Analisar repositório com Codex
-        uses: openai-labs/codex-analyze-action@v1
-        with:
-          api-key: ${{ secrets.CODEX_API_KEY }}
-          mode: "auto"
-          objectives: |
-            1. Corrigir SEO (meta tags, robots.txt, duplicatas)
-            2. Remover arquivos mortos (ex: public/index.html duplicado, BiotipoCalculator não usado)
-            3. Substituir SalesBot.jsx por Alquimista com WhatsApp
-            4. Implementar ProductGrid com produtos reais Castor
-            5. Gerar README.md atualizado e LICENSE (MIT)
-            6. Committar melhorias no branch main
+      - name: 📦 Instalar dependências
+        run: npm ci
 
-      - name: 📝 Aplicar melhorias automáticas
-        run: |
-          git config --global user.name "codex-bot"
-          git config --global user.email "codex-bot@users.noreply.github.com"
-          git add .
-          git commit -m "🤖 Codex Autopilot: SEO + Alquimista + limpeza duplicatas" || echo "Nenhuma mudança detectada"
-          git push origin main
+      - name: 🔍 Rodar Lint
+        run: npm run lint
+
+      - name: 🏗️ Rodar Build
+        run: npm run build
 
       - name: 🚀 Deploy automático no Vercel
         uses: amondnet/vercel-action@v20
