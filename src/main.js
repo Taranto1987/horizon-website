@@ -63,24 +63,29 @@ function updateActiveNavigation() {
 function initAnimations() {
   // Check if Intersection Observer is supported
   if ('IntersectionObserver' in window) {
-    observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-          
-          // Trigger counter animation for stats
-          if (entry.target.classList.contains('stats')) {
-            animateCounters();
+    observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+
+            // Trigger counter animation for stats
+            if (entry.target.classList.contains('stats')) {
+              animateCounters();
+            }
           }
-        }
-      });
-    }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    });
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      }
+    );
 
     // Observe elements with data-aos attribute
-    const animatedElements = document.querySelectorAll('[data-aos], .feature-card, .service-card, .stats');
+    const animatedElements = document.querySelectorAll(
+      '[data-aos], .feature-card, .service-card, .stats'
+    );
     animatedElements.forEach(el => observer.observe(el));
   }
 }
@@ -96,7 +101,7 @@ function initCounters() {
 // Animate counter numbers
 function animateCounters() {
   const counters = document.querySelectorAll('.stat-number[data-target]');
-  
+
   counters.forEach(counter => {
     const target = parseInt(counter.getAttribute('data-target'));
     const duration = 2000; // 2 seconds
@@ -120,21 +125,21 @@ function animateCounters() {
 // Smooth scrolling for navigation links
 function initSmoothScrolling() {
   const navLinks = document.querySelectorAll('a[href^="#"]');
-  
+
   navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', e => {
       e.preventDefault();
-      
+
       const targetId = link.getAttribute('href').substring(1);
       const targetSection = document.getElementById(targetId);
-      
+
       if (targetSection) {
         const headerHeight = document.querySelector('.header').offsetHeight;
         const targetPosition = targetSection.offsetTop - headerHeight;
-        
+
         window.scrollTo({
           top: targetPosition,
-          behavior: 'smooth'
+          behavior: 'smooth',
         });
       }
     });
@@ -144,42 +149,45 @@ function initSmoothScrolling() {
 // Contact form functionality
 function initContactForm() {
   const form = document.querySelector('.contact-form');
-  
+
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', e => {
       e.preventDefault();
-      
+
       // Get form data
       const formData = new FormData(form);
       const data = {
         name: formData.get('name'),
         email: formData.get('email'),
-        message: formData.get('message')
+        message: formData.get('message'),
       };
-      
+
       // Basic validation
       if (!data.name || !data.email || !data.message) {
         showNotification('Por favor, preencha todos os campos.', 'error');
         return;
       }
-      
+
       // Email validation
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(data.email)) {
         showNotification('Por favor, insira um e-mail válido.', 'error');
         return;
       }
-      
+
       // Simulate form submission
       const submitButton = form.querySelector('button[type="submit"]');
       const originalText = submitButton.textContent;
-      
+
       submitButton.textContent = 'Enviando...';
       submitButton.disabled = true;
-      
+
       // Simulate API call
       setTimeout(() => {
-        showNotification('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
+        showNotification(
+          'Mensagem enviada com sucesso! Entraremos em contato em breve.',
+          'success'
+        );
         form.reset();
         submitButton.textContent = originalText;
         submitButton.disabled = false;
@@ -193,22 +201,22 @@ function showNotification(message, type = 'info') {
   // Remove existing notifications
   const existingNotifications = document.querySelectorAll('.notification');
   existingNotifications.forEach(notification => notification.remove());
-  
+
   // Create notification element
   const notification = document.createElement('div');
   notification.className = `notification notification-${type}`;
   notification.textContent = message;
   notification.setAttribute('role', 'alert');
   notification.setAttribute('aria-live', 'polite');
-  
+
   // Add to page
   document.body.appendChild(notification);
-  
+
   // Animate in
   requestAnimationFrame(() => {
     notification.classList.add('notification-show');
   });
-  
+
   // Auto remove after 5 seconds
   setTimeout(() => {
     notification.classList.remove('notification-show');
@@ -235,9 +243,9 @@ window.addEventListener('scroll', debounce(updateActiveNavigation, 10));
 // Lazy loading images (if any are added later)
 function initLazyLoading() {
   const images = document.querySelectorAll('img[data-src]');
-  
+
   if ('IntersectionObserver' in window && images.length > 0) {
-    const imageObserver = new IntersectionObserver((entries) => {
+    const imageObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const img = entry.target;
@@ -247,7 +255,7 @@ function initLazyLoading() {
         }
       });
     });
-    
+
     images.forEach(img => imageObserver.observe(img));
   }
 }
@@ -262,5 +270,5 @@ export {
   initCounters,
   initSmoothScrolling,
   initContactForm,
-  showNotification
+  showNotification,
 };

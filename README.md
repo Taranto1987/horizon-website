@@ -115,17 +115,20 @@ O projeto está configurado para deploy automático no Vercel:
 ## 🔧 Configuração
 
 ### Vite Configuration
+
 - Plugins de legacy para compatibilidade
 - Minificação com Terser
 - PostCSS com Autoprefixer
 - Code splitting automático
 
 ### ESLint Rules
+
 - ES2024 support
 - Regras de qualidade de código
 - Detecção de variáveis não utilizadas
 
 ### Prettier Config
+
 - Formatação consistente
 - Single quotes
 - Semi-colons

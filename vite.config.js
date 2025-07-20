@@ -5,39 +5,37 @@ import autoprefixer from 'autoprefixer';
 export default defineConfig({
   plugins: [
     legacy({
-      targets: ['defaults', 'not IE 11']
-    })
+      targets: ['defaults', 'not IE 11'],
+    }),
   ],
   build: {
     minify: 'terser',
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
-      }
+        drop_debugger: true,
+      },
     },
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['intersection-observer']
-        }
-      }
+          vendor: ['intersection-observer'],
+        },
+      },
     },
     cssCodeSplit: true,
-    sourcemap: false
+    sourcemap: false,
   },
   css: {
     postcss: {
-      plugins: [
-        autoprefixer
-      ]
-    }
+      plugins: [autoprefixer],
+    },
   },
   server: {
     port: 3000,
-    open: true
+    open: true,
   },
   preview: {
-    port: 4173
-  }
+    port: 4173,
+  },
 });

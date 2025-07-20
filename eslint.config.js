@@ -4,6 +4,7 @@ export default [
   js.configs.recommended,
   {
     files: ['**/*.js'],
+    ignores: ['dist/**', 'node_modules/**'],
     languageOptions: {
       ecmaVersion: 2024,
       sourceType: 'module',
@@ -17,16 +18,16 @@ export default [
         clearInterval: 'readonly',
         requestAnimationFrame: 'readonly',
         IntersectionObserver: 'readonly',
-        FormData: 'readonly'
-      }
+        FormData: 'readonly',
+      },
     },
     rules: {
       'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       'no-console': 'warn',
       'prefer-const': 'error',
       'no-var': 'error',
-      'eqeqeq': 'error',
-      'curly': 'error'
-    }
-  }
+      eqeqeq: 'error',
+      curly: 'error',
+    },
+  },
 ];
