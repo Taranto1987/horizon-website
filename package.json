@@ -1,0 +1,30 @@
+{
+  "name": "loja-castor-cabo-frio",
+  "version": "1.0.0",
+  "description": "Website oficial da Loja Castor Cabo Frio - Colchões e produtos para o sono",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0"
+  },
+  "keywords": [
+    "colchões",
+    "cabo frio",
+    "castor",
+    "sono",
+    "móveis"
+  ],
+  "author": "Loja Castor Cabo Frio",
+  "homepage": "https://www.lojacastorcabofrio.com.br"
+}
