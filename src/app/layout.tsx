@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Layout from "@/components/layout/Layout";
 
 export const metadata: Metadata = {
   title: "Loja Castor Cabo Frio - Colchões e Travesseiros de Qualidade",
@@ -27,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className="font-sans antialiased">
-        {children}
+        <Layout>
+          {children}
+        </Layout>
       </body>
     </html>
   );
