@@ -57,6 +57,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/mapa" className="text-gray-300 hover:text-white transition-colors">
+                  Mapa do Sono IA
+                </Link>
+              </li>
+              <li>
                 <Link href="/sobre" className="text-gray-300 hover:text-white transition-colors">
                   Sobre Nós
                 </Link>

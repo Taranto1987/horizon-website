@@ -4,22 +4,27 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="container mx-auto px-4 py-20 relative z-10">
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Durma Melhor, Viva Melhor
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-gray-900">
+              Loja Castor Cabo Frio
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-              Na Loja Castor Cabo Frio, oferecemos os melhores colchões e travesseiros para transformar suas noites em momentos de verdadeiro descanso.
+            <p className="text-xl md:text-2xl mb-8 text-gray-600 leading-relaxed">
+              Há mais de 30 anos oferecendo os melhores colchões e travesseiros para o seu conforto e qualidade do sono. Tradição, qualidade e atendimento especializado em Cabo Frio.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/produtos" 
-                className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-block"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
               >
                 Ver Produtos
+              </Link>
+              <Link 
+                href="/mapa" 
+                className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block"
+              >
+                Mapa do Sono IA
               </Link>
               <a 
                 href="https://wa.me/5522992410112" 
@@ -213,20 +218,26 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="bg-gray-100 py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Pronto para uma noite de sono perfeita?
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            Visite nossa loja em Cabo Frio
           </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Visite nossa loja em Cabo Frio ou entre em contato conosco. Nossa equipe está pronta para ajudar você a encontrar o colchão dos seus sonhos.
+          <p className="text-xl mb-8 text-gray-600 max-w-2xl mx-auto">
+            Nossa equipe está pronta para ajudar você a encontrar o colchão dos seus sonhos. Venha nos conhecer!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contato" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-block"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
             >
               Como Chegar
+            </Link>
+            <Link 
+              href="/mapa" 
+              className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block"
+            >
+              Mapa do Sono IA
             </Link>
             <a 
               href="https://wa.me/5522992410112" 
