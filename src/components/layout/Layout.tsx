@@ -1,6 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
 import FloatingWhatsApp from '../ui/FloatingWhatsApp';
+import AlquimistaAssistant from '../ui/AlquimistaAssistant';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -15,6 +16,7 @@ const Layout = ({ children }: LayoutProps) => {
       </main>
       <Footer />
       <FloatingWhatsApp />
+      <AlquimistaAssistant />
     </div>
   );
 };
