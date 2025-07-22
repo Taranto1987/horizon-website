@@ -15,29 +15,29 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="bg-blue-600 text-white px-3 py-2 rounded-lg font-bold text-xl">
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="bg-castor text-white px-4 py-2 rounded-lg font-bold text-xl shadow-lg">
               CASTOR
             </div>
-            <span className="text-gray-700 font-medium">Cabo Frio</span>
+            <div className="flex flex-col">
+              <span className="text-gray-800 font-bold text-sm leading-tight">EXCLUSIVA</span>
+              <span className="text-castor font-semibold text-sm leading-tight">CABO FRIO</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="/" className="text-gray-700 hover:text-castor transition-colors font-medium">
               Início
             </Link>
-            <Link href="/produtos" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Produtos
+            <Link href="/produtos" className="text-gray-700 hover:text-castor transition-colors font-medium">
+              Catálogo Completo
             </Link>
-            <Link href="/mapa" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="/mapa" className="text-gray-700 hover:text-castor transition-colors font-medium">
               Mapa do Sono IA
             </Link>
-            <Link href="/sobre" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Sobre
-            </Link>
-            <Link href="/contato" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Contato
+            <Link href="/contato" className="text-gray-700 hover:text-castor transition-colors font-medium">
+              Contato/WhatsApp
             </Link>
           </nav>
 
@@ -53,7 +53,7 @@ const Header = () => {
             </a>
             <a 
               href="tel:22992410112" 
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-castor transition-colors font-medium"
             >
               (22) 99241-0112
             </a>
@@ -77,38 +77,31 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <Link 
                 href="/" 
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                className="text-gray-700 hover:text-castor transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Início
               </Link>
               <Link 
                 href="/produtos" 
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                className="text-gray-700 hover:text-castor transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Produtos
+                Catálogo Completo
               </Link>
               <Link 
                 href="/mapa" 
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                className="text-gray-700 hover:text-castor transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Mapa do Sono IA
               </Link>
               <Link 
-                href="/sobre" 
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Sobre
-              </Link>
-              <Link 
                 href="/contato" 
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                className="text-gray-700 hover:text-castor transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contato
+                Contato/WhatsApp
               </Link>
               <div className="pt-4 space-y-2">
                 <a 
@@ -121,7 +114,7 @@ const Header = () => {
                 </a>
                 <a 
                   href="tel:22992410112" 
-                  className="block text-gray-700 hover:text-blue-600 transition-colors font-medium text-center"
+                  className="block text-gray-700 hover:text-castor transition-colors font-medium text-center"
                 >
                   (22) 99241-0112
                 </a>

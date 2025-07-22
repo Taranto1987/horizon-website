@@ -3,11 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --castor-red: #dc2626;
+  --castor-red-dark: #b91c1c;
+  --castor-red-light: #fecaca;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-castor-red: var(--castor-red);
+  --color-castor-red-dark: var(--castor-red-dark);
+  --color-castor-red-light: var(--castor-red-light);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -23,4 +29,24 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.gradient-castor {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+.text-castor {
+  color: var(--castor-red);
+}
+
+.bg-castor {
+  background-color: var(--castor-red);
+}
+
+.bg-castor:hover {
+  background-color: var(--castor-red-dark);
+}
+
+.border-castor {
+  border-color: var(--castor-red);
 }

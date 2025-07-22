@@ -6,8 +6,8 @@ import { products, categories, Product } from '@/data/products';
 const ProductCard = ({ product }: { product: Product }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-      <div className="bg-gradient-to-br from-blue-50 to-blue-100 h-48 flex items-center justify-center">
-        <div className="text-blue-600 text-6xl">{product.image}</div>
+      <div className="bg-gradient-to-br from-red-50 to-red-100 h-48 flex items-center justify-center">
+        <div className="text-castor text-6xl">{product.image}</div>
       </div>
       <div className="p-6">
         <div className="flex items-center justify-between mb-2">
@@ -49,7 +49,7 @@ const ProductCard = ({ product }: { product: Product }) => {
 
         <div className="flex justify-between items-center">
           <div>
-            <span className="text-2xl font-bold text-blue-600">
+            <span className="text-2xl font-bold text-castor">
               A partir de R$ {product.price.min.toLocaleString('pt-BR')}
             </span>
             {product.price.max && (
@@ -57,6 +57,9 @@ const ProductCard = ({ product }: { product: Product }) => {
                 até R$ {product.price.max.toLocaleString('pt-BR')}
               </div>
             )}
+            <div className="text-xs text-gray-500 mt-1">
+              12x sem juros no cartão
+            </div>
           </div>
           <a 
             href="https://wa.me/5522992410112" 
@@ -64,7 +67,7 @@ const ProductCard = ({ product }: { product: Product }) => {
             rel="noopener noreferrer"
             className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors text-sm font-medium"
           >
-            Consultar
+            Falar no WhatsApp
           </a>
         </div>
       </div>
@@ -79,16 +82,23 @@ export default function ProductsPage() {
     ? products.filter(product => product.category === selectedCategory)
     : products;
 
+  const categoryTitles = {
+    'colchoes': 'Colchões em Espuma',
+    'acessorios': 'Bases Box e Baús',
+    'travesseiros': 'Travesseiros & Acessórios',
+    'protetores': 'Protetores'
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      <section className="gradient-castor text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Nossos Produtos
+              Catálogo Completo
             </h1>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-red-100">
               Descubra a linha completa de colchões, travesseiros e acessórios Castor. 
               Qualidade garantida para o seu melhor sono.
             </p>
@@ -96,7 +106,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Filters */}
+      {/* Category Filters */}
       <section className="py-8 bg-white shadow-sm">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
@@ -104,11 +114,11 @@ export default function ProductsPage() {
               onClick={() => setSelectedCategory('')}
               className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 selectedCategory === '' 
-                  ? 'bg-blue-600 text-white' 
+                  ? 'bg-castor text-white' 
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
-              Todos ({products.length})
+              Todos os Produtos ({products.length})
             </button>
             {categories.map((category) => (
               <button
@@ -116,11 +126,11 @@ export default function ProductsPage() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                   selectedCategory === category.id 
-                    ? 'bg-blue-600 text-white' 
+                    ? 'bg-castor text-white' 
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
-                {category.name} ({category.count})
+                {categoryTitles[category.id as keyof typeof categoryTitles] || category.name} ({category.count})
               </button>
             ))}
           </div>
@@ -144,7 +154,7 @@ export default function ProductsPage() {
             <>
               <div className="text-center mb-8">
                 <h2 className="text-2xl font-bold text-gray-900">
-                  {selectedCategory ? categories.find(c => c.id === selectedCategory)?.name : 'Todos os Produtos'}
+                  {selectedCategory ? (categoryTitles[selectedCategory as keyof typeof categoryTitles] || categories.find(c => c.id === selectedCategory)?.name) : 'Todos os Produtos'}
                 </h2>
                 <p className="text-gray-600 mt-2">
                   {filteredProducts.length} {filteredProducts.length === 1 ? 'produto' : 'produtos'} encontrado{filteredProducts.length === 1 ? '' : 's'}
@@ -162,13 +172,14 @@ export default function ProductsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="gradient-castor text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Encontrou o produto ideal?
           </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-red-100 max-w-2xl mx-auto">
             Entre em contato conosco para mais informações, preços especiais e condições de pagamento.
+            Fale direto com o dono da loja!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
@@ -181,7 +192,7 @@ export default function ProductsPage() {
             </a>
             <a 
               href="tel:22992410112" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-block"
+              className="bg-white text-castor px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-block"
             >
               (22) 99241-0112
             </a>
