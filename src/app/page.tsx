@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { products, contactInfo } from '@/data/products';
+import FAQ from '@/components/features/FAQ';
+import SleepCalculator from '@/components/features/SleepCalculator';
 
 export default function Home() {
   const featuredProducts = products.slice(0, 6);
@@ -161,6 +163,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Sleep Calculator */}
+      <SleepCalculator />
+
+      {/* FAQ Section */}
+      <FAQ />
 
       {/* Call to Action */}
       <section className="py-16 bg-blue-900 text-white">
