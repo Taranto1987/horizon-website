@@ -10,6 +10,19 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Primary color palette - Red theme */
+  --color-primary-50: #FEE2E2;
+  --color-primary-100: #FECACA;
+  --color-primary-200: #FCA5A5;
+  --color-primary-300: #F87171;
+  --color-primary-400: #EF4444;
+  --color-primary-500: #DC2626;
+  --color-primary-600: #B91C1C;
+  --color-primary-700: #991B1B;
+  --color-primary-800: #7F1D1D;
+  --color-primary-900: #641E16;
+  --color-primary: #DC2626;
 }
 
 @media (prefers-color-scheme: dark) {
