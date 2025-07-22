@@ -1,164 +1,36 @@
-🚀 RELATÓRIO DE AUDITORIA & IMPLEMENTAÇÃO – SITE LOJA CASTOR CABO FRIO
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-✅ ESTRUTURA TÉCNICA ESSENCIAL:
+## Getting Started
 
-Next.js 14+ (App Router)
+First, run the development server:
 
-TypeScript
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Tailwind CSS
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Context API global (produtos sincronizados)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-SEO avançado (schema, sitemap, robots.txt, OpenGraph)
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Performance otimizada (mobile-first, Lighthouse 90+)
+## Learn More
 
-Componentes globais integrados: Header, Footer, SalesBot, Calculator, Catalog, Reviews, FAQ, Mapa, SeoHead
+To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-✅ AJUSTES IMEDIATOS:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-Corrigir número no rodapé: (22) 99241-0112
+## Deploy on Vercel
 
-Mapa do Sono IA com altura/peso limitados por valores reais e definitivos (sem exemplos)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Produtos oficiais Castor integrados ao catálogo
-
-
-✅ MAPA DO SONO IA — FLUXO E IMPLEMENTAÇÃO COMPLETA:
-
-1️⃣ Coleta de Dados:
-
-Fontes: smartwatch, pulseira inteligente, colchão smart, apps/questionários
-
-Dados: movimentos (actigrafia), batimentos cardíacos, respiração, temperatura, ruído, luz ambiente
-
-
-2️⃣ Pré-processamento:
-
-Limpeza e normalização dos dados
-
-Interpolação de gaps
-
-
-3️⃣ Análise Estatística Inicial:
-
-Média, desvio padrão, distribuição horários dormir/acordar
-
-Duração despertares noturnos
-
-Tempo médio em cada ciclo do sono (N1, N2, N3, REM)
-
-
-4️⃣ Modelagem com IA (Machine Learning):
-
-Redes neurais, árvores de decisão, clustering
-
-Identificação padrões (ciclos curtos, fragmentados)
-
-Previsões e recomendações
-
-
-5️⃣ Geração do Mapa do Sono:
-
-Visual gráfico tipo hipnograma (profundidade do sono)
-
-Destaque anomalias (microdespertares, poucos ciclos REM)
-
-
-6️⃣ Feedback Personalizado:
-
-Sugestões práticas: ajustes de horário, temperatura, redução de luz azul, técnicas relaxamento
-
-Baseado em dados anteriores e grandes bases comparativas
-
-
-7️⃣ Monitoramento Contínuo e Autoaprendizado:
-
-IA aprende e refina previsões automaticamente
-
-Avaliação contínua dos ajustes do usuário
-
-
-8️⃣ Alertas e Relatórios:
-
-Relatórios semanais/mensais (evolução qualidade do sono)
-
-Alertas automáticos para condições clínicas específicas
-
-
-✅ CATÁLOGO INTEGRADO CASTOR – MODELOS PRINCIPAIS:
-
-Amazon Prime Gel Pocket®
-
-Silver Star Air Pocket®
-
-Technopadic Híbrido Pocket®
-
-Kingdom Látex
-
-Light Stress Pocket®
-
-Fontana Pocket®
-
-Revolution Pocket®
-
-Evolution Gel Pocket®
-
-Gold Star Pocket®
-
-Ortopedic (Espuma D33)
-
-Evolution Gel (sem molas)
-
-Protetores & Travesseiros (ViscoSoft, Sleep Flocos)
-
-
-Cada produto inclui imagens reais, ficha técnica detalhada e descrição persuasiva otimizada para SEO local.
-
-✅ SCRIPTS DE VENDA AUTOMÁTICOS (WhatsApp):
-
-Recuperação orçamento abandonado: “Olá! Você simulou orçamento no nosso site. Aproveite nossas condições especiais hoje com entrega rápida e frete grátis! Estamos à disposição para ajudar imediatamente.”
-
-Upsell: “Obrigado pela compra! Adicione um protetor impermeável com 20% OFF para proteger seu colchão. Quer saber mais? Só responder!”
-
-
-✅ ESTRATÉGIAS OMNICHANNEL:
-
-Integração WhatsApp (mensagens automáticas personalizadas)
-
-Vitrine virtual Instagram
-
-Google Meu Negócio (avaliações integradas)
-
-
-✅ ESTRATÉGIAS DE SEO E PERFORMANCE:
-
-Schema.org completo (produtos, reviews, localização)
-
-Sitemap.xml e Robots.txt
-
-Acessibilidade padrão AA/AAA
-
-
-✅ DADOS DE CONTATO OFICIAIS: Loja Castor Cabo Frio Av. Júlia Kubitschek, Nº 64 – Jardim Flamboyant, Cabo Frio - RJ WhatsApp: (22) 99241-0112 Instagram: @castorcabofrio Google Maps: https://g.co/kgs/AJb6386 Site oficial: https://www.lojacastorcabofrio.com.br/
-
-✅ COMO UTILIZAR ESSE DOCUMENTO:
-
-Copie diretamente para GitHub como instrução detalhada ao desenvolvedor (copilot)
-
-Certifique-se que tudo seja implementado exatamente conforme especificado
-
-Realize deploy imediato após os ajustes
-
-
-✅ PRONTO PARA LANÇAR E VENDER:
-
-Tudo revisado, corrigido e validado
-
-Estrutura 100% DRY (dados centralizados)
-
-SEO avançado e fluxo de vendas automático prontos para máxima conversão
-
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
