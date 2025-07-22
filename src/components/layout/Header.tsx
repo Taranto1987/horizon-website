@@ -30,6 +30,9 @@ const Header = () => {
             <Link href="/produtos" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Produtos
             </Link>
+            <Link href="/mapa" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              Mapa do Sono IA
+            </Link>
             <Link href="/sobre" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Sobre
             </Link>
@@ -85,6 +88,13 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Produtos
+              </Link>
+              <Link 
+                href="/mapa" 
+                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Mapa do Sono IA
               </Link>
               <Link 
                 href="/sobre" 
