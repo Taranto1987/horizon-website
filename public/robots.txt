@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.lojacastorcabofrio.com.br/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Block admin areas (if any)
+# Disallow: /admin/
