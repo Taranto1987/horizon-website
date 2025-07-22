@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import StructuredData from "@/components/ui/StructuredData";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -29,6 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <StructuredData />
+      </head>
       <body className="font-sans antialiased">
         {children}
       </body>
