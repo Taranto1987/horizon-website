@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.lojacastorcabofrio.com.br/sitemap.xml
+
+# Block access to development files
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /*.config.js
+Disallow: /*.config.ts
