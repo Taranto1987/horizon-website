@@ -16,7 +16,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="bg-blue-600 text-white px-3 py-2 rounded-lg font-bold text-xl">
+            <div className="bg-red-700 text-white px-3 py-2 rounded-lg font-bold text-xl" style={{backgroundColor: '#C8102B'}}>
               CASTOR
             </div>
             <span className="text-gray-700 font-medium">Cabo Frio</span>
@@ -24,19 +24,19 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="/" className="text-gray-700 hover:text-red-700 transition-colors font-medium">
               Início
             </Link>
-            <Link href="/produtos" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="/produtos" className="text-gray-700 hover:text-red-700 transition-colors font-medium">
               Produtos
             </Link>
-            <Link href="/mapa" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="/mapa" className="text-gray-700 hover:text-red-700 transition-colors font-medium">
               Mapa do Sono IA
             </Link>
-            <Link href="/sobre" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="/sobre" className="text-gray-700 hover:text-red-700 transition-colors font-medium">
               Sobre
             </Link>
-            <Link href="/contato" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="/contato" className="text-gray-700 hover:text-red-700 transition-colors font-medium">
               Contato
             </Link>
           </nav>
@@ -53,7 +53,7 @@ const Header = () => {
             </a>
             <a 
               href="tel:22992410112" 
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-red-700 transition-colors font-medium"
             >
               (22) 99241-0112
             </a>
@@ -77,35 +77,35 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <Link 
                 href="/" 
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                className="text-gray-700 hover:text-red-700 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Início
               </Link>
               <Link 
                 href="/produtos" 
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                className="text-gray-700 hover:text-red-700 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Produtos
               </Link>
               <Link 
                 href="/mapa" 
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                className="text-gray-700 hover:text-red-700 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Mapa do Sono IA
               </Link>
               <Link 
                 href="/sobre" 
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                className="text-gray-700 hover:text-red-700 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Sobre
               </Link>
               <Link 
                 href="/contato" 
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                className="text-gray-700 hover:text-red-700 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contato
@@ -121,7 +121,7 @@ const Header = () => {
                 </a>
                 <a 
                   href="tel:22992410112" 
-                  className="block text-gray-700 hover:text-blue-600 transition-colors font-medium text-center"
+                  className="block text-gray-700 hover:text-red-700 transition-colors font-medium text-center"
                 >
                   (22) 99241-0112
                 </a>
