@@ -2,13 +2,13 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r text-white py-16" style={{background: 'linear-gradient(to right, #C8102B, #a10d26)'}}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Nossa História
             </h1>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-red-100">
               Mais de 30 anos dedicados ao seu melhor sono em Cabo Frio
             </p>
           </div>
@@ -43,10 +43,10 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <div className="bg-blue-100 h-96 rounded-lg flex items-center justify-center">
+              <div className="bg-gray-100 h-96 rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-8xl mb-4">🏪</div>
-                  <p className="text-blue-600 font-semibold">Nossa Loja em Cabo Frio</p>
+                  <p className="text-gray-700 font-semibold">Nossa Loja em Cabo Frio</p>
                 </div>
               </div>
             </div>
@@ -69,8 +69,8 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                 </div>
@@ -156,7 +156,7 @@ export default function AboutPage() {
               Profissionais especializados e apaixonados por oferecer o melhor atendimento
             </p>
 
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-8 rounded-lg">
+            <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-8 rounded-lg">
               <div className="text-6xl mb-4">👥</div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 Equipe Especializada
@@ -210,19 +210,19 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="bg-red-700 text-white py-16" style={{backgroundColor: '#C8102B'}}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Venha nos conhecer!
           </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-red-100 max-w-2xl mx-auto">
             Estamos localizados no coração de Cabo Frio, prontos para receber você e sua família 
             com o melhor atendimento.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/contato" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-block"
+              className="bg-white text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-block"
             >
               Como Chegar
             </a>
