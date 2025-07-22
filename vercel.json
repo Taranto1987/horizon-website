@@ -1,11 +1,11 @@
 {
-  "builds": [
-    {
-      "src": "vite.config.js",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm ci",
+  "functions": {
+    "src/app/**/*.tsx": {
+      "runtime": "edge"
     }
-  ],
-  "framework": "vite",
-  "outputDirectory": "dist"
+  }
 }
