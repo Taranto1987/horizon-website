@@ -86,12 +86,12 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Telefone</h3>
               <div className="text-gray-600">
-                <a href="tel:22992410112" className="text-lg font-semibold text-green-600 hover:text-green-700">
-                  (22) 99241-0112
+                <a href="tel:2299241012" className="text-lg font-semibold text-green-600 hover:text-green-700">
+                  Thalles (22) 99241-012
                 </a>
                 <p className="mt-2 text-sm">WhatsApp e Ligações</p>
                 <a 
-                  href="https://wa.me/5522992410112" 
+                  href="https://wa.me/5522992401012" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-block mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors text-sm"
@@ -112,15 +112,11 @@ export default function ContactPage() {
               <div className="text-gray-600 text-sm space-y-1">
                 <div className="flex justify-between">
                   <span>Segunda a Sexta:</span>
-                  <span>8h às 18h</span>
+                  <span>9h às 18h</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Sábado:</span>
-                  <span>8h às 17h</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Domingo:</span>
-                  <span>9h às 13h</span>
+                  <span>9h às 12h</span>
                 </div>
               </div>
             </div>
@@ -265,7 +261,7 @@ export default function ContactPage() {
                   Precisa de atendimento imediato? Fale conosco pelo WhatsApp!
                 </p>
                 <a 
-                  href="https://wa.me/5522992410112" 
+                  href="https://wa.me/5522992401012" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white text-green-600 py-3 px-6 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-block"
