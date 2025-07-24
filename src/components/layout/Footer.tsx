@@ -29,7 +29,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="https://wa.me/5522992410112" 
+                href="https://wa.me/5522992401012" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -120,8 +120,8 @@ const Footer = () => {
                 <svg className="w-5 h-5 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                <a href="tel:22992410112" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  (22) 99241-0112
+                <a href="tel:2299241012" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  (22) 99241-012 - Thalles
                 </a>
               </div>
 
@@ -142,7 +142,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2024 Loja Castor Cabo Frio. Todos os direitos reservados.
+              Desenvolvido com ❤️ por Thalles Taranto
             </p>
             <div className="flex space-x-6 text-sm">
               <Link href="/politica-privacidade" className="text-gray-400 hover:text-white transition-colors">
