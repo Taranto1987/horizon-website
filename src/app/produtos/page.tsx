@@ -6,8 +6,8 @@ import { products, categories, Product } from '@/data/products';
 const ProductCard = ({ product }: { product: Product }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-      <div className="bg-gradient-to-br from-blue-50 to-blue-100 h-48 flex items-center justify-center">
-        <div className="text-blue-600 text-6xl">{product.image}</div>
+      <div className="bg-gradient-to-br from-red-50 to-red-100 h-48 flex items-center justify-center">
+        <div className="text-red-600 text-6xl">{product.image}</div>
       </div>
       <div className="p-6">
         <div className="flex items-center justify-between mb-2">
@@ -49,7 +49,7 @@ const ProductCard = ({ product }: { product: Product }) => {
 
         <div className="flex justify-between items-center">
           <div>
-            <span className="text-2xl font-bold text-blue-600">
+            <span className="text-2xl font-bold text-red-600">
               A partir de R$ {product.price.min.toLocaleString('pt-BR')}
             </span>
             {product.price.max && (
@@ -82,13 +82,13 @@ export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-red-600 to-red-800 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Nossos Produtos
             </h1>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-red-100">
               Descubra a linha completa de colchões, travesseiros e acessórios Castor. 
               Qualidade garantida para o seu melhor sono.
             </p>
@@ -104,7 +104,7 @@ export default function ProductsPage() {
               onClick={() => setSelectedCategory('')}
               className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 selectedCategory === '' 
-                  ? 'bg-blue-600 text-white' 
+                  ? 'bg-red-600 text-white' 
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -116,7 +116,7 @@ export default function ProductsPage() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                   selectedCategory === category.id 
-                    ? 'bg-blue-600 text-white' 
+                    ? 'bg-red-600 text-white' 
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -162,12 +162,12 @@ export default function ProductsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="bg-red-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Encontrou o produto ideal?
           </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-red-100 max-w-2xl mx-auto">
             Entre em contato conosco para mais informações, preços especiais e condições de pagamento.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -181,7 +181,7 @@ export default function ProductsPage() {
             </a>
             <a 
               href="tel:22992410112" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-block"
+              className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-block"
             >
               (22) 99241-0112
             </a>
