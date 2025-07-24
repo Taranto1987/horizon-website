@@ -27,7 +27,7 @@ export default function Home() {
                 Mapa do Sono IA
               </Link>
               <a 
-                href="https://wa.me/5522992410112" 
+                href="https://wa.me/5522992401012" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block"
@@ -240,12 +240,12 @@ export default function Home() {
               Mapa do Sono IA
             </Link>
             <a 
-              href="https://wa.me/5522992410112" 
+              href="https://wa.me/5522992401012" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block"
             >
-              (22) 99241-0112
+              Thalles (22) 99241-012
             </a>
           </div>
         </div>

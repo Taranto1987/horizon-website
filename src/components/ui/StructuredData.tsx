@@ -9,7 +9,7 @@ export default function StructuredData() {
     "alternateName": "Castor Cabo Frio",
     "description": "Loja especializada em colchões, travesseiros e acessórios da marca Castor em Cabo Frio. Mais de 30 anos oferecendo qualidade e conforto para o seu sono.",
     "url": "https://www.lojacastorcabofrio.com.br",
-    "telephone": "+55-22-99241-0112",
+    "telephone": "+55-22-99241-012",
     "email": "contato@lojacastorcabofrio.com.br",
     "address": {
       "@type": "PostalAddress",
@@ -28,25 +28,19 @@ export default function StructuredData() {
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "08:00",
+        "opens": "09:00",
         "closes": "18:00"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": "Saturday",
-        "opens": "08:00",
-        "closes": "17:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Sunday",
         "opens": "09:00",
-        "closes": "13:00"
+        "closes": "12:00"
       }
     ],
     "sameAs": [
       "https://instagram.com/castorcabofrio",
-      "https://wa.me/5522992410112"
+      "https://wa.me/5522992401012"
     ],
     "image": "https://www.lojacastorcabofrio.com.br/logo.png",
     "priceRange": "$$",

@@ -44,7 +44,7 @@ const Header = () => {
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <a 
-              href="https://wa.me/5522992410112" 
+              href="https://wa.me/5522992401012" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors font-medium"
@@ -52,10 +52,10 @@ const Header = () => {
               WhatsApp
             </a>
             <a 
-              href="tel:22992410112" 
+              href="tel:2299241012" 
               className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
             >
-              (22) 99241-0112
+              Thalles (22) 99241-012
             </a>
           </div>
 
@@ -112,7 +112,7 @@ const Header = () => {
               </Link>
               <div className="pt-4 space-y-2">
                 <a 
-                  href="https://wa.me/5522992410112" 
+                  href="https://wa.me/5522992401012" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors font-medium text-center"
@@ -120,10 +120,10 @@ const Header = () => {
                   WhatsApp
                 </a>
                 <a 
-                  href="tel:22992410112" 
+                  href="tel:2299241012" 
                   className="block text-gray-700 hover:text-blue-600 transition-colors font-medium text-center"
                 >
-                  (22) 99241-0112
+                  Thalles (22) 99241-012
                 </a>
               </div>
             </nav>
