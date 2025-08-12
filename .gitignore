@@ -45,3 +45,6 @@ next-env.d.ts
 
 # Arquivos grandes
 *.zip
+
+# Arquivos grandes
+*.zip
