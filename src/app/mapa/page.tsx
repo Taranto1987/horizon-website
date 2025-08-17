@@ -48,9 +48,12 @@ export default function MapaDoSono() {
                   <p className="text-gray-600 text-sm">Receba sugestões personalizadas</p>
                 </div>
               </div>
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg w-full">
+              <Link 
+                href="/mapa/questionario"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg w-full block text-center"
+              >
                 Criar Meu Mapa do Sono
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -120,9 +123,12 @@ export default function MapaDoSono() {
               Junte-se a eles e transforme suas noites!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg">
+              <Link 
+                href="/mapa/questionario"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
+              >
                 Criar Meu Mapa do Sono
-              </button>
+              </Link>
               <Link 
                 href="/produtos" 
                 className="bg-white text-gray-900 border border-gray-300 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors text-lg"
