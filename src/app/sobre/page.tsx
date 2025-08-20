@@ -2,13 +2,13 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-amber-700 to-amber-900 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Nossa História
             </h1>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-amber-100">
               Mais de 30 anos dedicados ao seu melhor sono em Cabo Frio
             </p>
           </div>
@@ -43,10 +43,10 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <div className="bg-blue-100 h-96 rounded-lg flex items-center justify-center">
+              <div className="bg-amber-100 h-96 rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-8xl mb-4">🏪</div>
-                  <p className="text-blue-600 font-semibold">Nossa Loja em Cabo Frio</p>
+                  <p className="text-amber-700 font-semibold">Nossa Loja em Cabo Frio</p>
                 </div>
               </div>
             </div>
