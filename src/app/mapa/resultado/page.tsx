@@ -55,8 +55,8 @@ export default function ResultadoMapaDoSono() {
               <h2 className="text-2xl font-bold text-gray-900 mb-2">
                 Recomendação Principal
               </h2>
-              <div className="bg-blue-100 rounded-lg p-6">
-                <h3 className="text-3xl font-bold text-blue-600 mb-2">
+              <div className="bg-purple-100 rounded-lg p-6">
+                <h3 className="text-3xl font-bold text-purple-600 mb-2">
                   {recommendation.primaryProduct}
                 </h3>
                 <p className="text-gray-700 text-lg">
@@ -95,7 +95,7 @@ export default function ResultadoMapaDoSono() {
                 </a>
                 <Link 
                   href="/produtos"
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg text-center"
+                  className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-lg text-center"
                 >
                   Ver Todos os Produtos
                 </Link>
@@ -124,7 +124,7 @@ export default function ResultadoMapaDoSono() {
               Resumo da análise
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="text-center p-4 bg-blue-50 rounded-lg">
+              <div className="text-center p-4 bg-purple-50 rounded-lg">
                 <div className="text-2xl mb-2">📏</div>
                 <div className="text-sm font-medium text-gray-700">Altura/Peso</div>
                 <div className="text-xs text-gray-600">Analisado</div>
@@ -148,7 +148,7 @@ export default function ResultadoMapaDoSono() {
           </div>
 
           {/* Next Steps */}
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 md:p-8">
+          <div className="bg-gradient-to-r from-purple-50 to-purple-50 rounded-lg p-6 md:p-8">
             <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
               Próximos passos
             </h3>
@@ -188,7 +188,7 @@ export default function ResultadoMapaDoSono() {
               </button>
               <Link 
                 href="/contato"
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               >
                 Informações da Loja
               </Link>
