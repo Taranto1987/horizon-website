@@ -1,23 +1,33 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { products, categories, Product } from '@/data/products';
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-      <div className="bg-gradient-to-br from-blue-50 to-blue-100 h-48 flex items-center justify-center">
-        <div className="text-blue-600 text-6xl">{product.image}</div>
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border-l-4 border-red-600">
+      <div className="bg-gradient-to-br from-red-50 to-red-100 h-48 flex items-center justify-center">
+        <div className="text-red-600 text-6xl">{product.image}</div>
       </div>
       <div className="p-6">
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-xl font-bold text-gray-900">{product.name}</h3>
           {product.featured && (
-            <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-              Destaque
+            <span className="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+              ⭐ Destaque
             </span>
           )}
         </div>
+        
+        {product.subcategory && (
+          <div className="mb-2">
+            <span className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+              {product.subcategory}
+            </span>
+          </div>
+        )}
+        
         <p className="text-gray-600 mb-4 text-sm leading-relaxed">{product.description}</p>
         
         <div className="mb-4">
@@ -34,6 +44,17 @@ const ProductCard = ({ product }: { product: Product }) => {
           </ul>
         </div>
 
+        {product.technical && (
+          <div className="mb-4">
+            <h4 className="font-semibold text-gray-900 mb-2">Especificações:</h4>
+            <div className="text-sm text-gray-600 space-y-1">
+              {product.technical.height && <div><strong>Altura:</strong> {product.technical.height}</div>}
+              {product.technical.springs && <div><strong>Molas:</strong> {product.technical.springs}</div>}
+              {product.technical.density && <div><strong>Densidade:</strong> {product.technical.density}</div>}
+            </div>
+          </div>
+        )}
+
         {product.sizes && (
           <div className="mb-4">
             <h4 className="font-semibold text-gray-900 mb-2">Tamanhos:</h4>
@@ -49,7 +70,13 @@ const ProductCard = ({ product }: { product: Product }) => {
 
         <div className="flex justify-between items-center">
           <div>
-            <span className="text-2xl font-bold text-blue-600">
+            {product.originalPrice && (
+              <div className="text-sm text-gray-400 line-through">
+                De R$ {product.originalPrice.min.toLocaleString('pt-BR')}
+                {product.originalPrice.max && ` a R$ ${product.originalPrice.max.toLocaleString('pt-BR')}`}
+              </div>
+            )}
+            <span className="text-2xl font-bold text-red-600">
               A partir de R$ {product.price.min.toLocaleString('pt-BR')}
             </span>
             {product.price.max && (
@@ -59,12 +86,12 @@ const ProductCard = ({ product }: { product: Product }) => {
             )}
           </div>
           <a 
-            href="https://wa.me/5522992410112" 
+            href={`https://wa.me/5522992410112?text=Tenho interesse no ${product.name}. Gostaria de um orçamento VIP!`}
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors text-sm font-medium"
+            className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors text-sm font-medium"
           >
-            Consultar
+            💬 Orçamento VIP
           </a>
         </div>
       </div>
@@ -82,15 +109,15 @@ export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-red-600 to-red-800 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Nossos Produtos
+              Linha Oficial Castor
             </h1>
-            <p className="text-xl text-blue-100">
-              Descubra a linha completa de colchões, travesseiros e acessórios Castor. 
-              Qualidade garantida para o seu melhor sono.
+            <p className="text-xl text-red-100">
+              Descubra a linha completa de colchões, travesseiros e acessórios Castor oficiais. 
+              Qualidade garantida, preços VIP para o seu melhor sono.
             </p>
           </div>
         </div>
@@ -104,7 +131,7 @@ export default function ProductsPage() {
               onClick={() => setSelectedCategory('')}
               className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 selectedCategory === '' 
-                  ? 'bg-blue-600 text-white' 
+                  ? 'bg-red-600 text-white' 
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -116,7 +143,7 @@ export default function ProductsPage() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                   selectedCategory === category.id 
-                    ? 'bg-blue-600 text-white' 
+                    ? 'bg-red-600 text-white' 
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -162,29 +189,32 @@ export default function ProductsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="bg-red-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Encontrou o produto ideal?
+            Encontrou seu Castor ideal?
           </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Entre em contato conosco para mais informações, preços especiais e condições de pagamento.
+          <p className="text-xl mb-8 text-red-100 max-w-2xl mx-auto">
+            Fale conosco agora no WhatsApp para orçamento VIP em 2 minutos, condições especiais e entrega rápida em Cabo Frio.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="https://wa.me/5522992410112" 
+              href="https://wa.me/5522992410112?text=Olá! Vi os produtos no site e gostaria de um orçamento VIP para colchões Castor. Podem me ajudar?" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block"
+              className="bg-green-600 text-white py-4 px-8 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block text-lg"
             >
-              Falar no WhatsApp
+              💬 Orçamento VIP no WhatsApp
             </a>
-            <a 
-              href="tel:22992410112" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-block"
+            <Link 
+              href="/mapa" 
+              className="bg-white text-red-600 py-4 px-8 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-block text-lg"
             >
-              (22) 99241-0112
-            </a>
+              🧠 Descobrir meu Castor ideal
+            </Link>
+          </div>
+          <div className="mt-6 text-red-100">
+            ⭐ Mais de 500 clientes satisfeitos • Loja oficial Castor Cabo Frio
           </div>
         </div>
       </section>
