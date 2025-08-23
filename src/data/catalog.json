@@ -1,0 +1,290 @@
+{
+  "metadata": {
+    "store": "Loja Castor Cabo Frio",
+    "address": "Av. Júlia Kubitschek, 64, Jardim Flamboyant",
+    "phone": "(22) 99241-0112",
+    "updated": "2024-08-23"
+  },
+  "products": [
+    {
+      "id": "amazon-premium-gel-pocket",
+      "name": "Amazon Premium Gel Pocket®",
+      "category": "colchoes",
+      "subcategory": "Pocket",
+      "price": {
+        "min": 2899,
+        "max": 3899
+      },
+      "originalPrice": {
+        "min": 3500,
+        "max": 4500
+      },
+      "description": "Tecnologia de molas ensacadas com gel para noites frescas e suporte individualizado. O colchão perfeito para quem busca frescor e conforto durante toda a noite.",
+      "features": [
+        "Molas Ensacadas Pocket",
+        "Tecnologia Gel Sense para regulação de temperatura",
+        "Pillow Top One Face",
+        "Tecido com tratamento antimicrobiano",
+        "Suporte personalizado para cada parte do corpo",
+        "Garantia de 10 anos"
+      ],
+      "technical": {
+        "height": "25cm",
+        "springs": "Molas Ensacadas Pocket",
+        "density": "Premium",
+        "foam": "Gel Sense + Espuma HR",
+        "certifications": ["INMETRO", "Certificação ISO"]
+      },
+      "image": "🛏️",
+      "featured": true,
+      "sizes": ["Solteiro", "Casal", "Queen", "King"],
+      "tags": ["gel", "pocket", "premium", "fresco", "antimicrobiano"],
+      "sleepProfile": {
+        "firmness": "Intermediário-Firme",
+        "position": ["lateral", "dorsal"],
+        "bodyType": ["médio", "pesado"],
+        "temperature": "quente"
+      }
+    },
+    {
+      "id": "silver-star-air-hibrido",
+      "name": "Silver Star Air Híbrido®",
+      "category": "colchoes",
+      "subcategory": "Pocket Híbrido",
+      "price": {
+        "min": 2999,
+        "max": 3999
+      },
+      "originalPrice": {
+        "min": 3600,
+        "max": 4700
+      },
+      "description": "Sistema de ventilação avançado com molas pocket independentes. Ideal para casais que buscam movimento independente e circulação de ar.",
+      "features": [
+        "Molas Ensacadas Pocket",
+        "Espuma de Alta Resiliência (HR)",
+        "Sistema Air Pocket para ventilação",
+        "Movimento zero entre parceiros",
+        "Tecido respirável",
+        "Garantia de 8 anos"
+      ],
+      "technical": {
+        "height": "28cm",
+        "springs": "Molas Ensacadas Pocket + HR",
+        "density": "D33 + HR",
+        "foam": "Espuma HR + Viscoelástica",
+        "certifications": ["INMETRO", "Certificação ISO"]
+      },
+      "image": "🌟",
+      "featured": true,
+      "sizes": ["Casal", "Queen", "King"],
+      "tags": ["hibrido", "ventilacao", "casais", "movimento-independente"],
+      "sleepProfile": {
+        "firmness": "Intermediário",
+        "position": ["lateral", "dorsal", "ventral"],
+        "bodyType": ["leve", "médio", "pesado"],
+        "temperature": "normal"
+      }
+    },
+    {
+      "id": "silver-star-air-tecnopedic",
+      "name": "Silver Star Air Tecnopedic®",
+      "category": "colchoes",
+      "subcategory": "Tecnopedic",
+      "price": {
+        "min": 2199,
+        "max": 2899
+      },
+      "originalPrice": {
+        "min": 2700,
+        "max": 3500
+      },
+      "description": "Tecnopedic com tecnologia Air para maior ventilação e conforto térmico. Combina robustez das molas LFK com respirabilidade.",
+      "features": [
+        "Molas LFK (Levemente Firmadas em Knotted)",
+        "Pillow Top One Face",
+        "Tecido respirável Air",
+        "Conforto firme ortopédico",
+        "Sistema de ventilação avançado",
+        "Garantia de 8 anos"
+      ],
+      "technical": {
+        "height": "25cm",
+        "springs": "Molas LFK",
+        "density": "D33",
+        "foam": "Espuma D33 + Pillow Top",
+        "certifications": ["INMETRO", "Certificação ISO"]
+      },
+      "image": "💨",
+      "featured": true,
+      "sizes": ["Casal", "Queen", "King"],
+      "tags": ["tecnopedic", "ortopedico", "ventilacao", "firme"],
+      "sleepProfile": {
+        "firmness": "Firme",
+        "position": ["dorsal", "ventral"],
+        "bodyType": ["médio", "pesado"],
+        "temperature": "quente"
+      }
+    },
+    {
+      "id": "kingdom-aloe-vera-pocket",
+      "name": "Kingdom Aloe Vera Pocket®",
+      "category": "colchoes",
+      "subcategory": "Pocket Premium",
+      "price": {
+        "min": 3299,
+        "max": 4299
+      },
+      "originalPrice": {
+        "min": 4000,
+        "max": 5000
+      },
+      "description": "Luxo e durabilidade com molas ensacadas e tratamento Aloe Vera para um sono revitalizante. Double Face para dobrar a vida útil.",
+      "features": [
+        "Molas Ensacadas Pocket",
+        "Tecido com tratamento Aloe Vera",
+        "Double Face - dobro da vida útil",
+        "Conforto macio premium",
+        "Propriedades hidratantes e calmantes",
+        "Garantia de 12 anos"
+      ],
+      "technical": {
+        "height": "30cm",
+        "springs": "Molas Ensacadas Pocket",
+        "density": "Premium Multi-density",
+        "foam": "Viscoelástica + Aloe Vera",
+        "certifications": ["INMETRO", "Certificação ISO", "Tratamento Aloe Vera"]
+      },
+      "image": "🌿",
+      "featured": true,
+      "sizes": ["Casal", "Queen", "King"],
+      "tags": ["premium", "aloe-vera", "double-face", "luxo", "hidratante"],
+      "sleepProfile": {
+        "firmness": "Macio",
+        "position": ["lateral"],
+        "bodyType": ["leve", "médio"],
+        "temperature": "normal"
+      }
+    },
+    {
+      "id": "plush-light-stress-pocket",
+      "name": "Plush Light Stress Pocket®",
+      "category": "colchoes",
+      "subcategory": "Pocket Antiestresse",
+      "price": {
+        "min": 2799,
+        "max": 3699
+      },
+      "originalPrice": {
+        "min": 3400,
+        "max": 4400
+      },
+      "description": "Desenvolvido especialmente para alívio do estresse e tensões do dia a dia. Perfeito para quem busca relaxamento total.",
+      "features": [
+        "Molas Ensacadas Pocket",
+        "Tecido com tecnologia antiestresse",
+        "Pillow Top One Face",
+        "Neutraliza cargas eletrostáticas",
+        "Alívio de tensões e estresse",
+        "Garantia de 10 anos"
+      ],
+      "technical": {
+        "height": "27cm",
+        "springs": "Molas Ensacadas Pocket",
+        "density": "D33 Premium",
+        "foam": "Espuma HR + Antiestresse",
+        "certifications": ["INMETRO", "Tecnologia Antiestresse"]
+      },
+      "image": "🌙",
+      "featured": true,
+      "sizes": ["Casal", "Queen", "King"],
+      "tags": ["antiestresse", "relaxamento", "pocket", "tensoes"],
+      "sleepProfile": {
+        "firmness": "Intermediário-Firme",
+        "position": ["lateral", "dorsal"],
+        "bodyType": ["médio"],
+        "temperature": "normal"
+      }
+    },
+    {
+      "id": "sleep-max-d28-18",
+      "name": "Sleep Max D28 - 18cm",
+      "category": "colchoes",
+      "subcategory": "Espuma D28",
+      "price": {
+        "min": 899,
+        "max": 1399
+      },
+      "originalPrice": {
+        "min": 1100,
+        "max": 1650
+      },
+      "description": "Linha clássica com espuma D28 e acabamento premium. Excelente custo-benefício para toda a família.",
+      "features": [
+        "Espuma D28 de qualidade",
+        "Double Face - uso dos dois lados",
+        "18cm de altura",
+        "Tecido macio e resistente",
+        "Borda reforçada",
+        "Garantia de 7 anos"
+      ],
+      "technical": {
+        "height": "18cm",
+        "springs": "Sem molas - Espuma",
+        "density": "D28",
+        "foam": "Espuma D28 Premium",
+        "certifications": ["INMETRO"]
+      },
+      "image": "💎",
+      "featured": false,
+      "sizes": ["Solteiro", "Casal", "Queen", "King"],
+      "tags": ["economico", "d28", "double-face", "basico"],
+      "sleepProfile": {
+        "firmness": "Firme",
+        "position": ["dorsal", "ventral"],
+        "bodyType": ["leve", "médio"],
+        "temperature": "normal"
+      }
+    },
+    {
+      "id": "red-white-d33-27",
+      "name": "Red White D33 - 27cm",
+      "category": "colchoes",
+      "subcategory": "Espuma D33",
+      "price": {
+        "min": 1399,
+        "max": 1899
+      },
+      "originalPrice": {
+        "min": 1700,
+        "max": 2300
+      },
+      "description": "Design moderno e conforto firme com 27cm de altura para uma experiência premium em espuma D33.",
+      "features": [
+        "Espuma D33 de alta densidade",
+        "Double Face - dobro da durabilidade",
+        "27cm de altura premium",
+        "Design Red White moderno",
+        "Suporte firme para coluna",
+        "Garantia de 8 anos"
+      ],
+      "technical": {
+        "height": "27cm",
+        "springs": "Sem molas - Espuma",
+        "density": "D33",
+        "foam": "Espuma D33 Premium",
+        "certifications": ["INMETRO"]
+      },
+      "image": "🔴",
+      "featured": false,
+      "sizes": ["Solteiro", "Casal", "Queen", "King"],
+      "tags": ["d33", "design-moderno", "red-white", "alto"],
+      "sleepProfile": {
+        "firmness": "Firme",
+        "position": ["dorsal", "ventral"],
+        "bodyType": ["médio", "pesado"],
+        "temperature": "normal"
+      }
+    }
+  ]
+}

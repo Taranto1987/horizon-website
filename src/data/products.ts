@@ -2,249 +2,319 @@ export interface Product {
   id: string;
   name: string;
   category: 'colchoes' | 'travesseiros' | 'acessorios' | 'protetores';
+  subcategory?: string;
   price: {
+    min: number;
+    max?: number;
+  };
+  originalPrice?: {
     min: number;
     max?: number;
   };
   description: string;
   features: string[];
+  technical?: {
+    height?: string;
+    springs?: string;
+    density?: string;
+    foam?: string;
+    certifications?: string[];
+  };
   image: string;
   featured: boolean;
   sizes?: string[];
+  tags?: string[];
+  sleepProfile?: {
+    firmness?: string;
+    position?: string[];
+    bodyType?: string[];
+    temperature?: string;
+  };
 }
 
 export const products: Product[] = [
-  // Colchões
+  // Colchões Castor Oficiais - Linha Premium Pocket
   {
-    id: 'amazon-prime-gel-pocket',
-    name: 'Amazon Prime Gel Pocket®',
+    id: 'amazon-premium-gel-pocket',
+    name: 'Amazon Premium Gel Pocket®',
     category: 'colchoes',
-    price: { min: 1299, max: 2599 },
-    description: 'Tecnologia gel com molas pocket para temperatura ideal e suporte personalizado. O colchão perfeito para quem busca frescor e conforto durante toda a noite.',
+    subcategory: 'Pocket',
+    price: { min: 2899, max: 3899 },
+    originalPrice: { min: 3500, max: 4500 },
+    description: 'Tecnologia de molas ensacadas com gel para noites frescas e suporte individualizado. O colchão perfeito para quem busca frescor e conforto durante toda a noite.',
     features: [
-      'Tecnologia Gel para regulação de temperatura',
-      'Molas Pocket independentes',
-      'Suporte personalizado para cada parte do corpo',
+      'Molas Ensacadas Pocket',
+      'Tecnologia Gel Sense para regulação de temperatura',
+      'Pillow Top One Face',
       'Tecido com tratamento antimicrobiano',
+      'Suporte personalizado para cada parte do corpo',
       'Garantia de 10 anos'
     ],
+    technical: {
+      height: '25cm',
+      springs: 'Molas Ensacadas Pocket',
+      density: 'Premium',
+      foam: 'Gel Sense + Espuma HR',
+      certifications: ['INMETRO', 'Certificação ISO']
+    },
     image: '🛏️',
     featured: true,
-    sizes: ['Solteiro', 'Casal', 'Queen', 'King']
+    sizes: ['Solteiro', 'Casal', 'Queen', 'King'],
+    tags: ['gel', 'pocket', 'premium', 'fresco', 'antimicrobiano'],
+    sleepProfile: {
+      firmness: 'Intermediário-Firme',
+      position: ['lateral', 'dorsal'],
+      bodyType: ['médio', 'pesado'],
+      temperature: 'quente'
+    }
   },
   {
-    id: 'silver-star-air-pocket',
-    name: 'Silver Star Air Pocket®',
+    id: 'silver-star-air-hibrido',
+    name: 'Silver Star Air Híbrido®',
     category: 'colchoes',
-    price: { min: 999, max: 1999 },
+    subcategory: 'Pocket Híbrido',
+    price: { min: 2999, max: 3999 },
+    originalPrice: { min: 3600, max: 4700 },
     description: 'Sistema de ventilação avançado com molas pocket independentes. Ideal para casais que buscam movimento independente e circulação de ar.',
     features: [
+      'Molas Ensacadas Pocket',
+      'Espuma de Alta Resiliência (HR)',
       'Sistema Air Pocket para ventilação',
-      'Molas independentes',
       'Movimento zero entre parceiros',
-      'Espuma de alta densidade',
+      'Tecido respirável',
       'Garantia de 8 anos'
     ],
+    technical: {
+      height: '28cm',
+      springs: 'Molas Ensacadas Pocket + HR',
+      density: 'D33 + HR',
+      foam: 'Espuma HR + Viscoelástica',
+      certifications: ['INMETRO', 'Certificação ISO']
+    },
     image: '🌟',
     featured: true,
-    sizes: ['Solteiro', 'Casal', 'Queen', 'King']
+    sizes: ['Casal', 'Queen', 'King'],
+    tags: ['hibrido', 'ventilacao', 'casais', 'movimento-independente'],
+    sleepProfile: {
+      firmness: 'Intermediário',
+      position: ['lateral', 'dorsal', 'ventral'],
+      bodyType: ['leve', 'médio', 'pesado'],
+      temperature: 'normal'
+    }
   },
   {
-    id: 'kingdom-latex',
-    name: 'Kingdom Látex',
+    id: 'silver-star-air-tecnopedic',
+    name: 'Silver Star Air Tecnopedic®',
     category: 'colchoes',
-    price: { min: 1599, max: 2999 },
-    description: 'Látex natural premium para máximo conforto e durabilidade. A escolha perfeita para quem valoriza materiais naturais e sustentáveis.',
+    subcategory: 'Tecnopedic',
+    price: { min: 2199, max: 2899 },
+    originalPrice: { min: 2700, max: 3500 },
+    description: 'Tecnopedic com tecnologia Air para maior ventilação e conforto térmico. Combina robustez das molas LFK com respirabilidade.',
     features: [
-      'Látex 100% natural',
-      'Propriedades antialérgicas',
-      'Durabilidade superior',
-      'Elasticidade e suporte ideais',
-      'Garantia de 12 anos'
-    ],
-    image: '👑',
-    featured: true,
-    sizes: ['Solteiro', 'Casal', 'Queen', 'King']
-  },
-  {
-    id: 'technopadic-hibrido-pocket',
-    name: 'Technopadic Híbrido Pocket®',
-    category: 'colchoes',
-    price: { min: 1199, max: 2399 },
-    description: 'Tecnologia híbrida combinando espumas avançadas e molas pocket para o equilíbrio perfeito entre conforto e suporte.',
-    features: [
-      'Tecnologia híbrida exclusiva',
-      'Espuma viscoelástica',
-      'Molas pocket de alta performance',
-      'Alívio de pontos de pressão',
-      'Garantia de 10 anos'
-    ],
-    image: '⚡',
-    featured: false,
-    sizes: ['Solteiro', 'Casal', 'Queen', 'King']
-  },
-  {
-    id: 'light-stress-pocket',
-    name: 'Light Stress Pocket®',
-    category: 'colchoes',
-    price: { min: 899, max: 1799 },
-    description: 'Desenvolvido especialmente para alívio do estresse e tensões do dia a dia. Perfeito para quem busca relaxamento total.',
-    features: [
-      'Espuma que alivia tensões',
-      'Molas pocket suaves',
-      'Tecido com infusão calmante',
-      'Suporte anatômico',
+      'Molas LFK (Levemente Firmadas em Knotted)',
+      'Pillow Top One Face',
+      'Tecido respirável Air',
+      'Conforto firme ortopédico',
+      'Sistema de ventilação avançado',
       'Garantia de 8 anos'
     ],
-    image: '🌙',
-    featured: false,
-    sizes: ['Solteiro', 'Casal', 'Queen', 'King']
+    technical: {
+      height: '25cm',
+      springs: 'Molas LFK',
+      density: 'D33',
+      foam: 'Espuma D33 + Pillow Top',
+      certifications: ['INMETRO', 'Certificação ISO']
+    },
+    image: '💨',
+    featured: true,
+    sizes: ['Casal', 'Queen', 'King'],
+    tags: ['tecnopedic', 'ortopedico', 'ventilacao', 'firme'],
+    sleepProfile: {
+      firmness: 'Firme',
+      position: ['dorsal', 'ventral'],
+      bodyType: ['médio', 'pesado'],
+      temperature: 'quente'
+    }
   },
   {
-    id: 'fontana-pocket',
-    name: 'Fontana Pocket®',
+    id: 'kingdom-aloe-vera-pocket',
+    name: 'Kingdom Aloe Vera Pocket®',
     category: 'colchoes',
-    price: { min: 799, max: 1599 },
-    description: 'Linha clássica com molas pocket e acabamento premium. Excelente custo-benefício para toda a família.',
+    subcategory: 'Pocket Premium',
+    price: { min: 3299, max: 4299 },
+    originalPrice: { min: 4000, max: 5000 },
+    description: 'Luxo e durabilidade com molas ensacadas e tratamento Aloe Vera para um sono revitalizante. Double Face para dobrar a vida útil.',
     features: [
-      'Molas pocket tradicionais',
-      'Espuma de alta qualidade',
+      'Molas Ensacadas Pocket',
+      'Tecido com tratamento Aloe Vera',
+      'Double Face - dobro da vida útil',
+      'Conforto macio premium',
+      'Propriedades hidratantes e calmantes',
+      'Garantia de 12 anos'
+    ],
+    technical: {
+      height: '30cm',
+      springs: 'Molas Ensacadas Pocket',
+      density: 'Premium Multi-density',
+      foam: 'Viscoelástica + Aloe Vera',
+      certifications: ['INMETRO', 'Certificação ISO', 'Tratamento Aloe Vera']
+    },
+    image: '🌿',
+    featured: true,
+    sizes: ['Casal', 'Queen', 'King'],
+    tags: ['premium', 'aloe-vera', 'double-face', 'luxo', 'hidratante'],
+    sleepProfile: {
+      firmness: 'Macio',
+      position: ['lateral'],
+      bodyType: ['leve', 'médio'],
+      temperature: 'normal'
+    }
+  },
+  {
+    id: 'plush-light-stress-pocket',
+    name: 'Plush Light Stress Pocket®',
+    category: 'colchoes',
+    subcategory: 'Pocket Antiestresse',
+    price: { min: 2799, max: 3699 },
+    originalPrice: { min: 3400, max: 4400 },
+    description: 'Desenvolvido especialmente para alívio do estresse e tensões do dia a dia. Perfeito para quem busca relaxamento total.',
+    features: [
+      'Molas Ensacadas Pocket',
+      'Tecido com tecnologia antiestresse',
+      'Pillow Top One Face',
+      'Neutraliza cargas eletrostáticas',
+      'Alívio de tensões e estresse',
+      'Garantia de 10 anos'
+    ],
+    technical: {
+      height: '27cm',
+      springs: 'Molas Ensacadas Pocket',
+      density: 'D33 Premium',
+      foam: 'Espuma HR + Antiestresse',
+      certifications: ['INMETRO', 'Tecnologia Antiestresse']
+    },
+    image: '🌙',
+    featured: true,
+    sizes: ['Casal', 'Queen', 'King'],
+    tags: ['antiestresse', 'relaxamento', 'pocket', 'tensoes'],
+    sleepProfile: {
+      firmness: 'Intermediário-Firme',
+      position: ['lateral', 'dorsal'],
+      bodyType: ['médio'],
+      temperature: 'normal'
+    }
+  },
+  {
+    id: 'sleep-max-d28-18',
+    name: 'Sleep Max D28 - 18cm',
+    category: 'colchoes',
+    subcategory: 'Espuma D28',
+    price: { min: 899, max: 1399 },
+    originalPrice: { min: 1100, max: 1650 },
+    description: 'Linha clássica com espuma D28 e acabamento premium. Excelente custo-benefício para toda a família.',
+    features: [
+      'Espuma D28 de qualidade',
+      'Double Face - uso dos dois lados',
+      '18cm de altura',
       'Tecido macio e resistente',
       'Borda reforçada',
       'Garantia de 7 anos'
     ],
+    technical: {
+      height: '18cm',
+      springs: 'Sem molas - Espuma',
+      density: 'D28',
+      foam: 'Espuma D28 Premium',
+      certifications: ['INMETRO']
+    },
     image: '💎',
     featured: false,
-    sizes: ['Solteiro', 'Casal', 'Queen', 'King']
+    sizes: ['Solteiro', 'Casal', 'Queen', 'King'],
+    tags: ['economico', 'd28', 'double-face', 'basico'],
+    sleepProfile: {
+      firmness: 'Firme',
+      position: ['dorsal', 'ventral'],
+      bodyType: ['leve', 'médio'],
+      temperature: 'normal'
+    }
   },
   {
-    id: 'revolution-pocket',
-    name: 'Revolution Pocket®',
+    id: 'red-white-d33-27',
+    name: 'Red White D33 - 27cm',
     category: 'colchoes',
-    price: { min: 1099, max: 2199 },
-    description: 'Revolução em conforto com tecnologia inovadora e design moderno. Para quem não abre mão da qualidade.',
+    subcategory: 'Espuma D33',
+    price: { min: 1399, max: 1899 },
+    originalPrice: { min: 1700, max: 2300 },
+    description: 'Design moderno e conforto firme com 27cm de altura para uma experiência premium em espuma D33.',
     features: [
-      'Tecnologia revolucionária',
-      'Molas de última geração',
-      'Camadas de conforto múltiplas',
-      'Design ergonômico',
-      'Garantia de 10 anos'
-    ],
-    image: '🚀',
-    featured: false,
-    sizes: ['Solteiro', 'Casal', 'Queen', 'King']
-  },
-  {
-    id: 'evolution-gel-pocket',
-    name: 'Evolution Gel Pocket®',
-    category: 'colchoes',
-    price: { min: 1399, max: 2699 },
-    description: 'Evolução da tecnologia gel com molas pocket avançadas. O futuro do sono chegou à sua casa.',
-    features: [
-      'Gel de nova geração',
-      'Molas pocket evolutivas',
-      'Refrigeração inteligente',
-      'Adaptação corporal perfeita',
-      'Garantia de 12 anos'
-    ],
-    image: '🔬',
-    featured: false,
-    sizes: ['Solteiro', 'Casal', 'Queen', 'King']
-  },
-  {
-    id: 'gold-star-pocket',
-    name: 'Gold Star Pocket®',
-    category: 'colchoes',
-    price: { min: 1199, max: 2399 },
-    description: 'Qualidade ouro com molas pocket premium. Para quem busca o melhor em conforto e durabilidade.',
-    features: [
-      'Molas pocket gold',
-      'Espuma premium',
-      'Tecido antibacteriano',
-      'Suporte diferenciado',
-      'Garantia de 10 anos'
-    ],
-    image: '🏆',
-    featured: false,
-    sizes: ['Solteiro', 'Casal', 'Queen', 'King']
-  },
-  {
-    id: 'ortopedic-d33',
-    name: 'Ortopedic (Espuma D33)',
-    category: 'colchoes',
-    price: { min: 599, max: 1199 },
-    description: 'Espuma ortopédica D33 para suporte firme e alinhamento da coluna. Ideal para quem prefere superfície mais firme.',
-    features: [
-      'Espuma D33 ortopédica',
-      'Suporte firme',
-      'Alinhamento da coluna',
-      'Tecido hipoalergênico',
-      'Garantia de 5 anos'
-    ],
-    image: '🦴',
-    featured: false,
-    sizes: ['Solteiro', 'Casal', 'Queen', 'King']
-  },
-  {
-    id: 'evolution-gel-sem-molas',
-    name: 'Evolution Gel (sem molas)',
-    category: 'colchoes',
-    price: { min: 899, max: 1799 },
-    description: 'Tecnologia gel avançada sem molas, para quem prefere superfície contínua com refrigeração.',
-    features: [
-      'Gel refrigerante',
-      'Espuma viscoelástica',
-      'Superfície contínua',
-      'Alívio de pressão',
+      'Espuma D33 de alta densidade',
+      'Double Face - dobro da durabilidade',
+      '27cm de altura premium',
+      'Design Red White moderno',
+      'Suporte firme para coluna',
       'Garantia de 8 anos'
     ],
-    image: '❄️',
+    technical: {
+      height: '27cm',
+      springs: 'Sem molas - Espuma',
+      density: 'D33',
+      foam: 'Espuma D33 Premium',
+      certifications: ['INMETRO']
+    },
+    image: '🔴',
     featured: false,
-    sizes: ['Solteiro', 'Casal', 'Queen', 'King']
+    sizes: ['Solteiro', 'Casal', 'Queen', 'King'],
+    tags: ['d33', 'design-moderno', 'red-white', 'alto'],
+    sleepProfile: {
+      firmness: 'Firme',
+      position: ['dorsal', 'ventral'],
+      bodyType: ['médio', 'pesado'],
+      temperature: 'normal'
+    }
   },
 
-  // Travesseiros
+  // Travesseiros Castor
   {
-    id: 'viscosoft-travesseiro',
-    name: 'Travesseiro ViscoSoft',
+    id: 'travesseiro-viscoelastico',
+    name: 'Travesseiro Viscoelástico Castor',
     category: 'travesseiros',
-    price: { min: 149, max: 249 },
+    price: { min: 189, max: 249 },
     description: 'Travesseiro em espuma viscoelástica que se adapta perfeitamente ao contorno da cabeça e pescoço.',
     features: [
-      'Espuma viscoelástica',
-      'Adaptação anatômica',
-      'Alívio de tensões cervicais',
-      'Capa removível e lavável',
+      'Espuma viscoelástica de alta qualidade',
+      'Adaptação anatômica perfeita',
+      'Alívio da pressão cervical',
+      'Capa 100% algodão removível',
       'Garantia de 2 anos'
-    ],
-    image: '🛌',
-    featured: false,
-    sizes: ['50x70cm', '50x90cm']
-  },
-  {
-    id: 'sleep-flocos-travesseiro',
-    name: 'Travesseiro Sleep Flocos',
-    category: 'travesseiros',
-    price: { min: 89, max: 149 },
-    description: 'Travesseiro em flocos de espuma, permitindo ajuste personalizado de altura e firmeza.',
-    features: [
-      'Flocos de espuma ajustáveis',
-      'Altura personalizável',
-      'Respirabilidade excelente',
-      'Capa 100% algodão',
-      'Garantia de 1 ano'
     ],
     image: '☁️',
     featured: false,
     sizes: ['50x70cm', '50x90cm']
   },
-
-  // Protetores
   {
-    id: 'protetor-impermeavel',
-    name: 'Protetor Impermeável',
+    id: 'travesseiro-latex',
+    name: 'Travesseiro Látex Natural',
+    category: 'travesseiros',
+    price: { min: 249, max: 329 },
+    description: 'Travesseiro em látex 100% natural com excelente elasticidade e respirabilidade.',
+    features: [
+      'Látex 100% natural',
+      'Propriedades antialérgicas',
+      'Excelente ventilação',
+      'Suporte cervical ideal',
+      'Garantia de 3 anos'
+    ],
+    image: '🌿',
+    featured: false,
+    sizes: ['50x70cm', '50x90cm']
+  },
+
+  // Protetores Castor
+  {
+    id: 'protetor-impermeavel-premium',
+    name: 'Protetor Impermeável Premium',
     category: 'protetores',
-    price: { min: 79, max: 159 },
+    price: { min: 89, max: 179 },
     description: 'Protetor de colchão impermeável que mantém a garantia do seu colchão, protegendo contra líquidos e ácaros.',
     features: [
       'Impermeável e respirável',
@@ -278,9 +348,9 @@ export const products: Product[] = [
   // Acessórios
   {
     id: 'base-box-premium',
-    name: 'Base Box Premium',
+    name: 'Base Box Premium Castor',
     category: 'acessorios',
-    price: { min: 399, max: 799 },
+    price: { min: 599, max: 999 },
     description: 'Base box de alta qualidade que complementa perfeitamente seu colchão Castor.',
     features: [
       'Estrutura reforçada',
@@ -292,23 +362,6 @@ export const products: Product[] = [
     image: '📦',
     featured: false,
     sizes: ['Solteiro', 'Casal', 'Queen', 'King']
-  },
-  {
-    id: 'cabeceira-estofada',
-    name: 'Cabeceira Estofada',
-    category: 'acessorios',
-    price: { min: 299, max: 599 },
-    description: 'Cabeceira estofada elegante que transforma seu quarto em um ambiente ainda mais aconchegante.',
-    features: [
-      'Design moderno',
-      'Estofado de qualidade',
-      'Fácil instalação',
-      'Várias cores disponíveis',
-      'Garantia de 2 anos'
-    ],
-    image: '🏠',
-    featured: false,
-    sizes: ['Casal', 'Queen', 'King']
   }
 ];
 

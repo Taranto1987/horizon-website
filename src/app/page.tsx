@@ -7,33 +7,44 @@ export default function Home() {
       <section className="bg-white py-16">
         <div className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-4">
+              <span className="text-lg font-semibold text-red-600">🛏️ Guru do Sono REM</span>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-gray-900">
-              Loja Castor Cabo Frio
+              Castor Cabo Frio
             </h1>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-red-600">
+              Descubra seu Castor Ideal com o Mapa do Sono IA
+            </h2>
             <p className="text-xl md:text-2xl mb-8 text-gray-600 leading-relaxed">
-              Há mais de 30 anos oferecendo os melhores colchões e travesseiros para o seu conforto e qualidade do sono. Tradição, qualidade e atendimento especializado em Cabo Frio.
+              Dormir bem paga juros diários. Aqui você encontra seu Castor certo.
+              <br />
+              <strong>Eu vendo solução, não espuma. Seu biotipo define o Castor ideal.</strong>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/produtos" 
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
-              >
-                Ver Produtos
-              </Link>
-              <Link 
                 href="/mapa" 
-                className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block"
+                className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors inline-block text-lg"
               >
-                Mapa do Sono IA
+                🧠 Descobrir meu Castor ideal
               </Link>
               <a 
-                href="https://wa.me/5522992410112" 
+                href="https://wa.me/5522992410112?text=Olá! Vim do site e gostaria de um orçamento VIP para colchões Castor." 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block"
+                className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block text-lg"
               >
-                Falar no WhatsApp
+                💬 Falar no WhatsApp agora – Orçamento VIP
               </a>
+              <Link 
+                href="/produtos" 
+                className="bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-colors inline-block text-lg"
+              >
+                Ver Produtos Oficiais
+              </Link>
+            </div>
+            <div className="mt-6 text-sm text-gray-500">
+              ⭐ Mais de 500 clientes reais, nota máxima no Google
             </div>
           </div>
         </div>
@@ -44,61 +55,76 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Nossos Destaques
+              Linha Oficial Castor
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Conheça nossa linha premium de colchões Castor, desenvolvidos com tecnologia avançada para o seu conforto.
+              Conheça nossa linha premium de colchões Castor, desenvolvidos com tecnologia avançada para o seu biotipo específico.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Product 1 */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="bg-blue-100 h-48 flex items-center justify-center">
-                <div className="text-blue-600 text-6xl">🛏️</div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border-l-4 border-red-600">
+              <div className="bg-red-50 h-48 flex items-center justify-center">
+                <div className="text-red-600 text-6xl">🛏️</div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Amazon Prime Gel Pocket®</h3>
-                <p className="text-gray-600 mb-4">Tecnologia gel com molas pocket para temperatura ideal e suporte personalizado.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Amazon Premium Gel Pocket®</h3>
+                <p className="text-gray-600 mb-4">Tecnologia gel com molas ensacadas para noites frescas e suporte individualizado.</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-blue-600">A partir de R$ 1.299</span>
-                  <Link href="/produtos" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
-                    Ver Mais
-                  </Link>
+                  <span className="text-2xl font-bold text-red-600">A partir de R$ 2.899</span>
+                  <a 
+                    href="https://wa.me/5522992410112?text=Tenho interesse no Amazon Premium Gel Pocket. Gostaria de um orçamento VIP!" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
+                  >
+                    Orçamento VIP
+                  </a>
                 </div>
               </div>
             </div>
 
             {/* Product 2 */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="bg-green-100 h-48 flex items-center justify-center">
-                <div className="text-green-600 text-6xl">🌟</div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border-l-4 border-red-600">
+              <div className="bg-red-50 h-48 flex items-center justify-center">
+                <div className="text-red-600 text-6xl">🌟</div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Silver Star Air Pocket®</h3>
-                <p className="text-gray-600 mb-4">Sistema de ventilação avançado com molas pocket independentes.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Silver Star Air Híbrido®</h3>
+                <p className="text-gray-600 mb-4">Sistema de ventilação avançado ideal para casais, com movimento independente.</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-blue-600">A partir de R$ 999</span>
-                  <Link href="/produtos" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
-                    Ver Mais
-                  </Link>
+                  <span className="text-2xl font-bold text-red-600">A partir de R$ 2.999</span>
+                  <a 
+                    href="https://wa.me/5522992410112?text=Tenho interesse no Silver Star Air Híbrido. Gostaria de um orçamento VIP!" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
+                  >
+                    Orçamento VIP
+                  </a>
                 </div>
               </div>
             </div>
 
             {/* Product 3 */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="bg-purple-100 h-48 flex items-center justify-center">
-                <div className="text-purple-600 text-6xl">👑</div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border-l-4 border-red-600">
+              <div className="bg-red-50 h-48 flex items-center justify-center">
+                <div className="text-red-600 text-6xl">🌿</div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Kingdom Látex</h3>
-                <p className="text-gray-600 mb-4">Látex natural premium para máximo conforto e durabilidade.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Kingdom Aloe Vera Pocket®</h3>
+                <p className="text-gray-600 mb-4">Luxo máximo com tratamento Aloe Vera e Double Face para dobrar a vida útil.</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-blue-600">A partir de R$ 1.599</span>
-                  <Link href="/produtos" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
-                    Ver Mais
-                  </Link>
+                  <span className="text-2xl font-bold text-red-600">A partir de R$ 3.299</span>
+                  <a 
+                    href="https://wa.me/5522992410112?text=Tenho interesse no Kingdom Aloe Vera Pocket. Gostaria de um orçamento VIP!" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
+                  >
+                    Orçamento VIP
+                  </a>
                 </div>
               </div>
             </div>
@@ -111,52 +137,46 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Por que escolher a Castor?
+              Por que escolher a Castor Cabo Frio?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Mais de 30 anos de experiência em proporcionar noites de sono perfeitas para toda a família.
+              Mais de 30 anos de experiência, loja oficial Castor na Região dos Lagos. Especialistas em encontrar seu biotipo ideal.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Qualidade Garantida</h3>
-              <p className="text-gray-600">Produtos certificados com garantia de fábrica e qualidade comprovada há décadas.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Loja Oficial Castor</h3>
+              <p className="text-gray-600">Produtos originais com garantia de fábrica e certificação oficial da marca Castor.</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
+              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-red-600 text-2xl">🧠</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Entrega Rápida</h3>
-              <p className="text-gray-600">Entregamos em toda Cabo Frio e região com agilidade e cuidado.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Mapa do Sono IA</h3>
+              <p className="text-gray-600">Tecnologia exclusiva para encontrar o colchão ideal para seu biotipo específico.</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-red-600 text-2xl">💬</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Melhor Preço</h3>
-              <p className="text-gray-600">Preços competitivos e condições especiais de pagamento para você.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Orçamento VIP 2min</h3>
+              <p className="text-gray-600">Atendimento direto no WhatsApp com orçamento personalizado em até 2 minutos.</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                </svg>
+              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-red-600 text-2xl">⭐</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Atendimento Especializado</h3>
-              <p className="text-gray-600">Nossa equipe está pronta para ajudar você a encontrar o colchão ideal.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">500+ Clientes VIP</h3>
+              <p className="text-gray-600">Mais de 500 clientes satisfeitos com nota máxima no Google. Prova social real.</p>
             </div>
           </div>
         </div>
