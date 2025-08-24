@@ -4,6 +4,12 @@
   "outputDirectory": ".next",
   "installCommand": "npm install",
   "devCommand": "npm run dev",
+  "git": {
+    "deploymentEnabled": {
+      "main": false,
+      "production": true
+    }
+  },
   "redirects": [
     {
       "source": "/whatsapp",
