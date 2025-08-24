@@ -1,0 +1,45 @@
+# Dependencies
+node_modules
+
+# Development files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Temporary files
+.DS_Store
+*.tsbuildinfo
+
+# IDE files
+.vscode
+.idea
+
+# Build artifacts
+.next/
+out/
+dist/
+
+# Test files
+coverage/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Documentation (optional - include if you want docs in deployed site)
+DEPLOYMENT.md
+
+# Archive files
+*.zip
+*.tar.gz
+
+# The "blue site" reference file
+conferir porque esse arquivo parece ser o site azul
+castor-site-final-com-funil.zip
