@@ -27,7 +27,7 @@ export default function MapaDoSono() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-2xl">📋</span>
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">1. Questionário</h3>
@@ -50,7 +50,7 @@ export default function MapaDoSono() {
               </div>
               <Link 
                 href="/mapa/questionario"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg w-full block text-center"
+                className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-lg w-full block text-center"
               >
                 Criar Meu Mapa do Sono
               </Link>
@@ -68,7 +68,7 @@ export default function MapaDoSono() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="flex items-start space-x-4">
-                <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                   <span className="text-xl">💤</span>
                 </div>
                 <div>
@@ -125,7 +125,7 @@ export default function MapaDoSono() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/mapa/questionario"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
+                className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-lg"
               >
                 Criar Meu Mapa do Sono
               </Link>

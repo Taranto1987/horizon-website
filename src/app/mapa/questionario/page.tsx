@@ -112,7 +112,7 @@ export default function QuestionarioMapaDoSono() {
   const renderProgressBar = () => (
     <div className="w-full bg-gray-200 rounded-full h-2 mb-8">
       <div 
-        className="bg-blue-600 h-2 rounded-full transition-all duration-300 ease-out"
+        className="bg-purple-600 h-2 rounded-full transition-all duration-300 ease-out"
         style={{ width: `${(currentStep / TOTAL_STEPS) * 100}%` }}
       ></div>
       <div className="text-center mt-2 text-sm text-gray-600">
@@ -159,7 +159,7 @@ export default function QuestionarioMapaDoSono() {
           type="text"
           value={data.name}
           onChange={(e) => updateData({ name: e.target.value })}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
           placeholder="Seu nome"
         />
       </div>
@@ -207,7 +207,7 @@ export default function QuestionarioMapaDoSono() {
               onClick={() => updateData({ position })}
               className={`p-4 border rounded-lg text-center transition-colors ${
                 data.position === position
-                  ? 'border-blue-600 bg-blue-50 text-blue-600'
+                  ? 'border-purple-600 bg-purple-50 text-purple-600'
                   : 'border-gray-300 hover:border-gray-400'
               }`}
             >
@@ -229,7 +229,7 @@ export default function QuestionarioMapaDoSono() {
                 onClick={() => updateData({ positionPartner: position })}
                 className={`p-4 border rounded-lg text-center transition-colors ${
                   data.positionPartner === position
-                    ? 'border-blue-600 bg-blue-50 text-blue-600'
+                    ? 'border-purple-600 bg-purple-50 text-purple-600'
                     : 'border-gray-300 hover:border-gray-400'
                 }`}
               >
@@ -296,7 +296,7 @@ export default function QuestionarioMapaDoSono() {
               onClick={() => updateData({ firmness })}
               className={`p-4 border rounded-lg text-center transition-colors ${
                 data.firmness === firmness
-                  ? 'border-blue-600 bg-blue-50 text-blue-600'
+                  ? 'border-purple-600 bg-purple-50 text-purple-600'
                   : 'border-gray-300 hover:border-gray-400'
               }`}
             >
@@ -317,7 +317,7 @@ export default function QuestionarioMapaDoSono() {
               onClick={() => updateData({ temperature: temp })}
               className={`p-4 border rounded-lg text-center transition-colors ${
                 data.temperature === temp
-                  ? 'border-blue-600 bg-blue-50 text-blue-600'
+                  ? 'border-purple-600 bg-purple-50 text-purple-600'
                   : 'border-gray-300 hover:border-gray-400'
               }`}
             >
@@ -343,7 +343,7 @@ export default function QuestionarioMapaDoSono() {
               onClick={() => updateData({ height })}
               className={`p-4 border rounded-lg text-center transition-colors ${
                 data.height === height
-                  ? 'border-blue-600 bg-blue-50 text-blue-600'
+                  ? 'border-purple-600 bg-purple-50 text-purple-600'
                   : 'border-gray-300 hover:border-gray-400'
               }`}
             >
@@ -365,7 +365,7 @@ export default function QuestionarioMapaDoSono() {
                 onClick={() => updateData({ heightPartner: height })}
                 className={`p-4 border rounded-lg text-center transition-colors ${
                   data.heightPartner === height
-                    ? 'border-blue-600 bg-blue-50 text-blue-600'
+                    ? 'border-purple-600 bg-purple-50 text-purple-600'
                     : 'border-gray-300 hover:border-gray-400'
                 }`}
               >
@@ -392,7 +392,7 @@ export default function QuestionarioMapaDoSono() {
               onClick={() => updateData({ weight })}
               className={`p-4 border rounded-lg text-center transition-colors ${
                 data.weight === weight
-                  ? 'border-blue-600 bg-blue-50 text-blue-600'
+                  ? 'border-purple-600 bg-purple-50 text-purple-600'
                   : 'border-gray-300 hover:border-gray-400'
               }`}
             >
@@ -414,7 +414,7 @@ export default function QuestionarioMapaDoSono() {
                 onClick={() => updateData({ weightPartner: weight })}
                 className={`p-4 border rounded-lg text-center transition-colors ${
                   data.weightPartner === weight
-                    ? 'border-blue-600 bg-blue-50 text-blue-600'
+                    ? 'border-purple-600 bg-purple-50 text-purple-600'
                     : 'border-gray-300 hover:border-gray-400'
                 }`}
               >
@@ -488,7 +488,7 @@ export default function QuestionarioMapaDoSono() {
               onClick={() => updateData({ ageRange: age })}
               className={`p-4 border rounded-lg text-center transition-colors ${
                 data.ageRange === age
-                  ? 'border-blue-600 bg-blue-50 text-blue-600'
+                  ? 'border-purple-600 bg-purple-50 text-purple-600'
                   : 'border-gray-300 hover:border-gray-400'
               }`}
             >
@@ -510,7 +510,7 @@ export default function QuestionarioMapaDoSono() {
                 onClick={() => updateData({ ageRangePartner: age })}
                 className={`p-4 border rounded-lg text-center transition-colors ${
                   data.ageRangePartner === age
-                    ? 'border-blue-600 bg-blue-50 text-blue-600'
+                    ? 'border-purple-600 bg-purple-50 text-purple-600'
                     : 'border-gray-300 hover:border-gray-400'
                 }`}
               >
@@ -564,7 +564,7 @@ export default function QuestionarioMapaDoSono() {
         <textarea
           value={data.additionalInfo}
           onChange={(e) => updateData({ additionalInfo: e.target.value })}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
           rows={4}
           placeholder="Informações adicionais (opcional)"
         />
@@ -642,7 +642,7 @@ export default function QuestionarioMapaDoSono() {
               className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                 !isStepComplete()
                   ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                  : 'bg-blue-600 text-white hover:bg-blue-700'
+                  : 'bg-purple-600 text-white hover:bg-purple-700'
               }`}
             >
               {currentStep === TOTAL_STEPS ? 'Finalizar' : 'Próximo'}
