@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy:check": "npm run lint && npm run build",
+    "deploy:prod": "echo 'Switch to production branch and push: git checkout production && git merge main && git push origin production'"
   },
   "dependencies": {
     "react": "19.1.0",
