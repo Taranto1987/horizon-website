@@ -1,0 +1,10 @@
+[
+  {
+    "sku": "BASE-BAU-VELLUS-CINZA-CASAL",
+    "nome": "Cama Box Baú Castor Bi-Partido Vellus Cinza",
+    "slug": "cama-box-bau-castor-bi-partido-vellus-cinza",
+    "tipologia": "BAU_BI_PARTIDO",
+    "acabamentos": ["tecido_vellus", "cor_cinza"],
+    "variantes": [ { "medida_key": "CASAL_138x188", "volume_m3": 0.45, "disponivel": true } ]
+  }
+]
