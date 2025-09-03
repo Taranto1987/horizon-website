@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%; /* Fundo branco limpo */
+  --foreground: 0 0% 9%; /* Texto escuro para contraste */
+
+  --card: 0 0% 98%; /* Cards com fundo levemente off-white */
+  --card-foreground: 0 0% 15%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 9%;
+
+  --primary: 0 65% 50%; /* Vermelho Castor Sofisticado */
+  --primary-foreground: 0 0% 100%; /* Branco para texto sobre vermelho */
+  
+  --primary-accent: 0 75% 55%; /* Vermelho um pouco mais vibrante para hover/foco */
+
+  --secondary: 0 0% 96%; /* Cinza muito claro para elementos secundários */
+  --secondary-foreground: 0 0% 20%;
+
+  --muted: 0 0% 92%;
+  --muted-foreground: 0 0% 45%;
+
+  --accent: 142 70% 45%; /* Verde Castor para CTAs e destaques específicos */
+  --accent-foreground: 0 0% 100%;
+  
+  --accent-castor-gold: 35 80% 60%; /* Dourado Castor */
+
+  --destructive: 0 70% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 0 0% 90%;
+  --input: 0 0% 96%;
+  --ring: 0 65% 55%; /* Vermelho para anel de foco */
+
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.gradient-bg-castor {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-accent)) 70%, hsl(var(--accent-castor-gold)) 100%);
+}
+
+.gradient-text-castor {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-accent)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-accent {
+  background: linear-gradient(135deg, hsl(var(--accent)), #22c55e); /* Verde Castor */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect-castor {
+  background: hsla(var(--card) / 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid hsla(var(--border) / 0.8);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.neon-glow-castor-primary {
+  box-shadow: 0 0 15px hsla(var(--primary) / 0.3), 0 0 30px hsla(var(--primary) / 0.15);
+}
+
+.neon-glow-castor-accent {
+  box-shadow: 0 0 15px hsla(var(--accent) / 0.3), 0 0 30px hsla(var(--accent) / 0.15);
+}
+
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+.pulse-glow-castor {
+  animation: pulse-glow-castor 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow-castor {
+  from { box-shadow: 0 0 20px hsla(var(--primary) / 0.3); }
+  to { box-shadow: 0 0 30px hsla(var(--primary) / 0.5), 0 0 40px hsla(var(--primary) / 0.2); }
+}
+
+.pulse-glow-accent {
+  animation: pulse-glow-accent 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow-accent {
+  from { box-shadow: 0 0 20px hsla(var(--accent) / 0.3); }
+  to { box-shadow: 0 0 30px hsla(var(--accent) / 0.5), 0 0 40px hsla(var(--accent) / 0.15); }
+}
+
+.chat-bubble {
+  position: relative;
+}
+
+.chat-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid hsl(var(--secondary));
+}
+
+.typing-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: hsl(var(--accent));
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-indicator:nth-child(1) { animation-delay: -0.32s; }
+.typing-indicator:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typing {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.5; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+.product-card {
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, hsla(var(--card) / 0.9), hsla(var(--card) / 0.7));
+  border: 1px solid hsla(var(--border) / 0.6);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px hsla(var(--primary) / 0.12);
+  border-color: hsla(var(--primary) / 0.3);
+}
+
+.calculator-step {
+  background: linear-gradient(135deg, hsla(var(--primary) / 0.03), hsla(var(--primary) / 0.01));
+  border: 1px solid hsla(var(--primary) / 0.12);
+}
+
+.bio-option {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-color: hsl(var(--border));
+  background: hsl(var(--background));
+}
+
+.bio-option:hover {
+  background: hsla(var(--primary) / 0.05);
+  border-color: hsla(var(--primary) / 0.3);
+}
+
+.bio-option.selected {
+  background: hsla(var(--primary) / 0.1);
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 15px hsla(var(--primary) / 0.2);
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Specific Castor color overrides */
+.gradient-text { /* Renaming to avoid conflict, will be castor-primary */
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-accent)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect { /* Renaming to avoid conflict, will be castor-card */
+  background: hsla(var(--card) / 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid hsla(var(--border) / 0.7);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.text-green-400 { color: hsl(var(--accent)) !important; }
+.text-green-300 { color: hsla(var(--accent) / 0.85) !important; }
+.border-green-500\/50 { border-color: hsla(var(--accent) / 0.5) !important; }
+.border-green-500\/40 { border-color: hsla(var(--accent) / 0.4) !important; }
+.border-green-500\/60 { border-color: hsla(var(--accent) / 0.6) !important; }
+.border-green-500\/30 { border-color: hsla(var(--accent) / 0.3) !important; }
+.hover\:text-green-400:hover { color: hsl(var(--accent)) !important; }
+.hover\:text-green-300:hover { color: hsla(var(--accent) / 0.85) !important; }
+.hover\:text-green-200:hover { color: hsla(var(--accent) / 0.7) !important; }
+.hover\:bg-green-500\/10:hover { background-color: hsla(var(--accent) / 0.1) !important; }
+.hover\:bg-green-500\/20:hover { background-color: hsla(var(--accent) / 0.2) !important; }
+.hover\:border-green-500:hover { border-color: hsl(var(--accent)) !important; }
+.focus\:ring-green-500:focus { --tw-ring-color: hsl(var(--accent)) !important; }
+.bg-green-500\/20 { background-color: hsla(var(--accent) / 0.2) !important; }
+.bg-green-500\/10 { background-color: hsla(var(--accent) / 0.1) !important; }
+.bg-green-600 { background-color: hsl(var(--accent)) !important; }
+.hover\:bg-green-700:hover { background-color: hsl(var(--accent)) !important; filter: brightness(0.9); }
+.from-green-500 { --tw-gradient-from: hsl(var(--accent)) !important; --tw-gradient-to: hsla(var(--accent),0) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
+.to-green-600 { --tw-gradient-to: hsl(var(--accent)) !important; filter: brightness(0.95) !important; }
+.hover\:from-green-600:hover { --tw-gradient-from: hsl(var(--accent)) !important; filter: brightness(0.9) !important; }
+.hover\:to-green-700:hover { --tw-gradient-to: hsl(var(--accent)) !important; filter: brightness(0.85) !important; }
+
+/* Primary Castor Red Buttons */
+.button-castor-primary {
+  background-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  border: none !important;
+}
+.button-castor-primary:hover {
+  background-color: hsl(var(--primary-accent)) !important;
+}
+
+.button-castor-outline {
+  border-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary)) !important;
+  background-color: transparent !important;
+}
+.button-castor-outline:hover {
+  background-color: hsla(var(--primary) / 0.08) !important;
+  color: hsl(var(--primary-accent)) !important;
+}
+
+/* Accent Green Buttons (keep for specific CTAs if needed) */
+.button-castor-accent {
+  background-color: hsl(var(--accent)) !important;
+  color: hsl(var(--accent-foreground)) !important;
+}
+.button-castor-accent:hover {
+  filter: brightness(0.9) !important;
+}
+
+/* Ajustes específicos para fundo branco */
+.hero-section {
+  background: linear-gradient(135deg, hsla(var(--primary) / 0.02) 0%, hsla(var(--accent-castor-gold) / 0.03) 100%);
+}
+
+/* Melhor contraste para textos em fundo branco */
+.text-slate-300 {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+/* Ajustes para elementos que precisam de mais contraste */
+.bg-background\/70 {
+  background-color: hsla(var(--background) / 0.95) !important;
+}
+
+/* Sombras mais suaves para fundo branco */
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Ajustes para o header em fundo branco */
+.glass-effect-castor.bg-card\/80 {
+  background-color: hsla(var(--background) / 0.95) !important;
+  border-bottom: 1px solid hsla(var(--border) / 0.8);
+}
+
+/* Garantir visibilidade do mascote Castorzinho em dispositivos móveis */
+.castorzinho-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+}
+
+@media (max-width: 768px) {
+  .castorzinho-icon {
+    min-width: 40px !important;
+    min-height: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .castorzinho-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .castorzinho-icon {
+    min-width: 48px !important;
+    min-height: 48px !important;
+    width: 48px !important;
+    height: 48px !important;
+  }
+  
+  .castorzinho-icon svg {
+    width: 24px !important;
+    height: 24px !important;
+    flex-shrink: 0 !important;
+  }
+}

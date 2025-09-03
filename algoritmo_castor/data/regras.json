@@ -1,0 +1,6 @@
+{
+  "preco_autores_validos": ["Thalles","Marcela"],
+  "origem_preco_valida": ["input_manual"],
+  "garantia_min": 12,
+  "garantia_max": 60
+}
