@@ -1,0 +1,13 @@
+[
+  {"id":"q1","tipo":"numero","chave":"peso_kg","label":"Qual seu peso (kg)?","min":30,"max":200},
+  {"id":"q2","tipo":"numero","chave":"altura_cm","label":"Qual sua altura (cm)?","min":130,"max":220},
+  {"id":"q3","tipo":"select","chave":"posicao","label":"Posição que mais dorme","opcoes":["costas","lado","bruços","mista"]},
+  {"id":"q4","tipo":"select","chave":"dor","label":"Sente dores?","opcoes":["lombar","cervical","quadril","ombro","nenhuma"]},
+  {"id":"q5","tipo":"range","chave":"firmeza_desejada","label":"Prefere macio ou firme?","min":1,"max":5},
+  {"id":"q6","tipo":"select","chave":"termico","label":"Sente calor à noite?","opcoes":["sente_calor","neutro","sente_frio"]},
+  {"id":"q7","tipo":"select","chave":"base_atual","label":"Dorme em base box, cama, palete?","opcoes":["box","cama","palete","outro"]},
+  {"id":"q8","tipo":"boolean","chave":"alergias","label":"Possui rinite/alergias?"},
+  {"id":"q9","tipo":"texto","chave":"cidade","label":"Cidade de entrega"},
+  {"id":"q10","tipo":"select","chave":"urgencia","label":"Quando precisa?","opcoes":["imediato","7_dias","15_dias","30_dias"]},
+  {"id":"q11","tipo":"select","chave":"orcamento_faixa","label":"Faixa de orçamento","opcoes":["econ","intermediario","premium","sem_limite"]}
+]

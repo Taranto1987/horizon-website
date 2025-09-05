@@ -1,0 +1,58 @@
+[
+  {
+    "sku": "COL-SILVERSTAR-POCKET-HIBR-QUEEN",
+    "nome": "Colchão Castor Silver Star Pocket Híbrido",
+    "slug": "colchao-castor-silver-star-pocket-hibrido",
+    "linha": "Silver Star",
+    "classe_tecnica": ["MOLAS_POCKET","HIBRIDO_POCKET_ESPUMA","EURO_PILLOW"],
+    "espessura_mm": 320,
+    "one_face": true,
+    "dupla_face": false,
+    "tecnologias": ["Tratamento Antialérgico"],
+    "firmeza": 3,
+    "suporte_peso_kg": [50, 120],
+    "garantia_meses": 36,
+    "certificacoes": ["INMETRO"],
+    "variantes": [ { "medida_key": "QUEEN_158x198", "codigo_fabricante": "SSPH-Q", "disponivel": true } ]
+  },
+  {
+    "sku": "COL-AMAZON-GEL-ONEFACE-POCKET-QUEEN",
+    "nome": "Colchão Castor Amazon Premium Gel One Face Pocket",
+    "slug": "colchao-castor-amazon-premium-gel-one-face-pocket",
+    "linha": "Amazon",
+    "classe_tecnica": ["MOLAS_POCKET","ONE_FACE","PILLOW_TOP"],
+    "espessura_mm": 320,
+    "tecnologias": ["Amazon Gel"],
+    "firmeza": 3,
+    "suporte_peso_kg": [55, 125],
+    "garantia_meses": 36,
+    "certificacoes": ["INMETRO"],
+    "variantes": [ { "medida_key": "CASAL_138x188", "codigo_fabricante": "AMZ-OG-CASAL", "disponivel": true } ]
+  },
+  {
+    "sku": "COL-TECNOPEDIC-D45-QUEEN",
+    "nome": "Colchão Castor Tecnopedic D45",
+    "slug": "colchao-castor-tecnopedic-d45",
+    "linha": "Tecnopedic",
+    "classe_tecnica": ["ESPUMA_D45","DOUBLE_FACE"],
+    "espessura_mm": 280,
+    "firmeza": 4,
+    "suporte_peso_kg": [60, 140],
+    "garantia_meses": 24,
+    "certificacoes": ["INMETRO"],
+    "variantes": [ { "medida_key": "QUEEN_158x198", "codigo_fabricante": "TEC-D45-Q", "disponivel": true } ]
+  },
+  {
+    "sku": "COL-SLEEPMAX-D33-CASAL",
+    "nome": "Colchão Castor Sleep Max D33",
+    "slug": "colchao-castor-sleep-max-d33",
+    "linha": "Sleep Max",
+    "classe_tecnica": ["ESPUMA_D33","ONE_FACE"],
+    "espessura_mm": 240,
+    "firmeza": 3,
+    "suporte_peso_kg": [40, 110],
+    "garantia_meses": 12,
+    "certificacoes": ["INMETRO"],
+    "variantes": [ { "medida_key": "CASAL_138x188", "codigo_fabricante": "SM-D33-C", "disponivel": true } ]
+  }
+]
