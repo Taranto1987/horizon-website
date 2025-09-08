@@ -65,14 +65,12 @@ const Footer = () => {
             <span className="text-lg font-semibold text-foreground mb-5 block">Navegação Rápida</span>
             <div className="space-y-2.5">
               {[
-                'Início',
-                'Colchões',
-                'Conj. box',
-                'Crie Conj.',
-                'Travesseiros',
-                'Box',
-                'Acessórios',
-                'ThallesZzz'
+                'Home',
+                'Produtos',
+                'Mapa do Sono',
+                'Guru ThallesZzz',
+                'Contato',
+                'Sobre a Loja'
               ].map(item => (
                 <p key={item} className="text-muted-foreground text-sm hover:text-primary cursor-pointer transition-colors hover:translate-x-1 duration-200">{item}</p>
               ))}

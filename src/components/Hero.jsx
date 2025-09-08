@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Brain, ArrowRight, Zap, Shield, Award } from 'lucide-react';
 
-// Import a local product image to use in the hero section instead of a remote placeholder.
-import kingdomAloeVeraImage from '@/assets/images/products/kingdom_aloe_vera_double_face_pocket.webp';
+// Use placeholder image URL instead of local import until assets are available
+const kingdomAloeVeraImage = '/kingdom_aloe_vera.jpg';
 
 const Hero = ({ onOpenCalculator, onNavigate }) => {
   return (
