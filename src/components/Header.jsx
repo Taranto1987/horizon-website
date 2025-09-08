@@ -80,7 +80,7 @@ const Header = ({ navItems, activePage, onNavigate, onOpenBot, onOpenCalculator 
               className="text-foreground/80 hover:text-primary"
             >
               <BotIcon className="w-4 h-4 mr-2" />
-              Guru do Sono Rem ThallesZzz
+              Guru ThallesZzz
             </Button>
           </div>
 
@@ -132,7 +132,7 @@ const Header = ({ navItems, activePage, onNavigate, onOpenBot, onOpenCalculator 
                   className="flex-1 button-castor-outline"
                 >
                   <BotIcon className="w-4 h-4 mr-2" />
-                  Guru do Sono Rem ThallesZzz
+                  Guru ThallesZzz
                 </Button>
               </div>
             </div>

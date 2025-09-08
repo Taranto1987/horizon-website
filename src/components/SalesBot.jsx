@@ -21,7 +21,7 @@ const SalesBot = ({ onClose }) => {
 
   useEffect(() => {
     setTimeout(() => {
-      addBotMessage("👋 Olá! Sou o Guru do Sono Castor Cabo Frio, pronto para guiá-lo(a) ao colchão ideal! Temos ofertas exclusivas e unidades limitadas esperando por você – como posso te ajudar a transformar seu sono hoje?", [
+      addBotMessage("👋 Olá! Sou o Guru ThallesZzz, pronto para guiá-lo(a) ao colchão ideal! Temos ofertas exclusivas e unidades limitadas esperando por você – como posso te ajudar a transformar seu sono hoje?", [
         { text: "🛏️ Ver Colchões", action: "show_colchoes" },
         { text: "📦 Ver Camas Box", action: "show_camas_box" },
         { text: "✨ Ver Conjuntos Box", action: "show_conjuntos" },
@@ -259,7 +259,7 @@ const SalesBot = ({ onClose }) => {
               <img src={ThallesAvatar} alt="Thalles Avatar" className="w-full h-full object-cover" />
             </div>
             <div>
-              <h3 className="font-semibold text-primary-foreground">Guru do Sono Rem ThallesZzz</h3>
+              <h3 className="font-semibold text-primary-foreground">Guru ThallesZzz</h3>
               <p className="text-xs text-primary-foreground/80">Especialista em colchões Castor</p>
             </div>
           </div>

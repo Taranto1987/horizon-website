@@ -94,14 +94,6 @@ const Footer = () => {
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
                 <span className="text-muted-foreground text-sm group-hover:text-primary transition-colors">{storePhoneNumber} (Thalles)</span>
               </a>
-              <a href="tel:+552233437720" className="flex items-center gap-3 group">
-                <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground text-sm group-hover:text-primary transition-colors">(22) 3343-7720 (Marcela)</span>
-              </a>
-              <a href="tel:+5522988447240" className="flex items-center gap-3 group">
-                <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground text-sm group-hover:text-primary transition-colors">(22) 98844-7240 (Marcela)</span>
-              </a>
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
                 <WhatsAppIcon className="w-4 h-4 text-primary flex-shrink-0" />
                 <span className="text-muted-foreground text-sm group-hover:text-primary transition-colors">WhatsApp Direto</span>

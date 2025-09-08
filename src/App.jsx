@@ -12,7 +12,9 @@ import {
   Box,
   Package,
   PlusCircle,
-  MessageSquare as MessageSquareText
+  MessageSquare as MessageSquareText,
+  Mail,
+  Info
 } from 'lucide-react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -56,23 +58,19 @@ const App = () => {
 
   const renderPage = () => {
     if (selectedProduct && currentPage.startsWith('produto-')) {
-      return <ProductPage product={selectedProduct} onBack={() => navigateTo('colchoes')} />;
+      return <ProductPage product={selectedProduct} onBack={() => navigateTo('produtos')} />;
     }
     switch (currentPage) {
       case 'home':
         return (
           <>
-            <Hero onOpenCalculator={() => { setShowCalculator(true); setCurrentPage('calculadora'); }} onNavigate={navigateTo} />
+            <Hero onOpenCalculator={() => { setShowCalculator(true); setCurrentPage('mapa-do-sono'); }} onNavigate={navigateTo} />
             <ReviewsSection />
           </>
-        );      case 'colchoes':
-      case 'conjuntos-box':
-      case 'crie-conjunto':
-      case 'travesseiros':
-      case 'box':
-      case 'acessorios':
+        );
+      case 'produtos':
         return <ProductGrid onProductSelect={(product) => navigateTo(`produto-${product.id}`, product)} />;
-      case 'calculadora':
+      case 'mapa-do-sono':
         return (
           <section id="calculadora-page" className="py-20 container mx-auto px-4">
             <motion.div
@@ -90,7 +88,7 @@ const App = () => {
             </motion.div>
             <div className="max-w-4xl mx-auto">
               <BiotipoCalculator onResult={handleCalculatorResult} 
-                onClose={() => { setShowCalculator(false); if(currentPage === 'calculadora' && !calculatorResultData) navigateTo('home');}}
+                onClose={() => { setShowCalculator(false); if(currentPage === 'mapa-do-sono' && !calculatorResultData) navigateTo('home');}}
                 onProductSelect={(product) => {
                   setShowCalculator(false);
                   navigateTo(`produto-${product.id}`, product);
@@ -99,22 +97,38 @@ const App = () => {
             </div>
           </section>
         );
-      case 'thalles-zzz':
+      case 'guru-thalleszzz':
         return <SalesBot onClose={() => setShowBot(false)} />;
+      case 'contato':
+        return (
+          <section id="contato-page" className="py-20 container mx-auto px-4">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-6">Contato</h1>
+              <p className="text-lg text-muted-foreground">Entre em contato conosco para mais informações sobre nossos colchões Castor.</p>
+            </div>
+          </section>
+        );
+      case 'sobre-a-loja':
+        return (
+          <section id="sobre-page" className="py-20 container mx-auto px-4">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-6">Sobre a Loja</h1>
+              <p className="text-lg text-muted-foreground">Sua loja exclusiva Castor em Cabo Frio, especialista em saúde do sono e da coluna.</p>
+            </div>
+          </section>
+        );
       default:
-        return <Hero onOpenCalculator={() => { setShowCalculator(true); setCurrentPage('calculadora'); }} onNavigate={navigateTo} />;
+        return <Hero onOpenCalculator={() => { setShowCalculator(true); setCurrentPage('mapa-do-sono'); }} onNavigate={navigateTo} />;
     }
   };
 
   const navItems = [
-    { id: 'home', label: 'Início', icon: Home },
-    { id: 'colchoes', label: 'Colchões', icon: Bed },
-    { id: 'conjuntos-box', label: 'Conj. box', icon: Bed },
-    { id: 'crie-conjunto', label: 'Crie Conj.', icon: PlusCircle },
-    { id: 'travesseiros', label: 'Travesseiros', icon: Pillow },
-    { id: 'box', label: 'Box', icon: Box },
-    { id: 'acessorios', label: 'Acessórios', icon: Package },
-    { id: 'thalles-zzz', label: 'ThallesZzz', icon: MessageSquareText },
+    { id: 'home', label: 'Home', icon: Home },
+    { id: 'produtos', label: 'Produtos', icon: Bed },
+    { id: 'mapa-do-sono', label: 'Mapa do Sono', icon: Brain },
+    { id: 'guru-thalleszzz', label: 'Guru ThallesZzz', icon: MessageSquareText },
+    { id: 'contato', label: 'Contato', icon: Mail },
+    { id: 'sobre-a-loja', label: 'Sobre a Loja', icon: Info },
   ];
 
   return (
@@ -123,8 +137,8 @@ const App = () => {
         navItems={navItems}
         activePage={currentPage}
         onNavigate={navigateTo}
-        onOpenBot={() => { setShowBot(true); setCurrentPage('thalles-zzz'); }}
-        onOpenCalculator={() => { setShowCalculator(true); setCurrentPage('calculadora'); }}
+        onOpenBot={() => { setShowBot(true); setCurrentPage('guru-thalleszzz'); }}
+        onOpenCalculator={() => { setShowCalculator(true); setCurrentPage('mapa-do-sono'); }}
       />
       
       <main className="relative pt-20">

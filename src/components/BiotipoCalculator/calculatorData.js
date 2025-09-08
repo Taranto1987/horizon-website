@@ -68,14 +68,15 @@ export const calculatorStepsData = [
   {
     id: 'pesoPessoa1', title: 'Qual seu peso aproximado?', icon: User, type: 'peso', person: 'Pessoa 1',
     options: [
-      { value: 'ate_50', label: 'Até 50kg' },
-      { value: '51_60', label: '51 a 60kg' },
-      { value: '61_70', label: '61 a 70kg' },
-      { value: '71_80', label: '71 a 80kg' },
-      { value: '81_90', label: '81 a 90kg' },
-      { value: '91_100', label: '91 a 100kg' },
-      { value: '101_120', label: '101 a 120kg' },
-      { value: '121_150', label: '121 a 150kg' }
+      { value: 'ate_50', label: 'Até 50Kg' },
+      { value: '51_60', label: '51Kg a 60Kg' },
+      { value: '61_70', label: '61Kg a 70Kg' },
+      { value: '71_80', label: '71Kg a 80Kg' },
+      { value: '81_90', label: '81Kg a 90Kg' },
+      { value: '91_100', label: '91Kg a 100Kg' },
+      { value: '101_120', label: '101Kg a 120Kg' },
+      { value: '121_150', label: '121Kg a 150Kg' },
+      { value: 'acima_151', label: 'Acima de 151Kg' }
     ]
   },
   {
@@ -98,14 +99,15 @@ export const calculatorStepsData = [
     id: 'pesoPessoa2', title: 'Peso da outra pessoa (parceiro ou parceira)?', icon: User, type: 'peso', person: 'Pessoa 2',
     condition: (ans) => ans.numeroPessoas === '2',
     options: [
-      { value: 'ate_50', label: 'Até 50kg' },
-      { value: '51_60', label: '51 a 60kg' },
-      { value: '61_70', label: '61 a 70kg' },
-      { value: '71_80', label: '71 a 80kg' },
-      { value: '81_90', label: '81 a 90kg' },
-      { value: '91_100', label: '91 a 100kg' },
-      { value: '101_120', label: '101 a 120kg' },
-      { value: '121_150', label: '121 a 150kg' }
+      { value: 'ate_50', label: 'Até 50Kg' },
+      { value: '51_60', label: '51Kg a 60Kg' },
+      { value: '61_70', label: '61Kg a 70Kg' },
+      { value: '71_80', label: '71Kg a 80Kg' },
+      { value: '81_90', label: '81Kg a 90Kg' },
+      { value: '91_100', label: '91Kg a 100Kg' },
+      { value: '101_120', label: '101Kg a 120Kg' },
+      { value: '121_150', label: '121Kg a 150Kg' },
+      { value: 'acima_151', label: 'Acima de 151Kg' }
     ]
   },
   {
