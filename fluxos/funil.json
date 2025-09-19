@@ -1,0 +1,47 @@
+{
+  "fluxo_expandido_castor_cabo_frio": {
+    "metadata": {
+      "versao": "3.0",
+      "persona": "Guardião do Sono REN",
+      "objetivo": "Funil completo de conversão com recuperação de carrinho",
+      "whatsapp_base": "https://wa.me/5522992410112"
+    },
+    "etapas": [
+      {
+        "id": "atracao",
+        "nome": "Atração",
+        "descricao": "Capturar atenção do cliente",
+        "perguntas": [
+          {
+            "id": "atr_001",
+            "texto": "Que tipo de sono você quer ter?",
+            "tipo": "multipla_escolha",
+            "opcoes": [
+              { "valor": "reparador", "label": "Sono reparador sem dores", "peso": 5 },
+              { "valor": "profundo", "label": "Sono profundo e contínuo", "peso": 4 },
+              { "valor": "confortavel", "label": "Mais conforto ao deitar", "peso": 3 },
+              { "valor": "economico", "label": "Melhor custo-benefício", "peso": 2 }
+            ],
+            "filtros_dinamicos": ["tipo_produto", "faixa_preco"],
+            "cta_whatsapp": "Quero dormir melhor! Preciso de ajuda para escolher o colchão ideal."
+          }
+        ]
+      }
+    ],
+    "carrinho_recuperacao": {
+      "triggers": [
+        {
+          "condicao": "abandonou_etapa_consideracao",
+          "tempo_espera_minutos": 15,
+          "mensagem": "Olá! Vi que você estava interessado num colchão Castor. Posso ajudar a esclarecer alguma dúvida?",
+          "cta_whatsapp": "Estou em dúvida sobre qual colchão escolher. Podem me ajudar?"
+        }
+      ]
+    },
+    "integracao_whatsapp": {
+      "numero_padrao": "5522992410112",
+      "mensagem_base": "Oi! Vim do site da Castor e ",
+      "tags_automaticas": ["#FunilSite", "#GuardiaoREN", "#CaboFrio"]
+    }
+  }
+}
