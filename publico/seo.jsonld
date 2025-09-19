@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://castor-cabo-frio.com/#business",
+      "name": "Castor Cabo Frio - Colchões e Acessórios",
+      "description": "Loja especializada em colchões Castor em Cabo Frio. Tecnologia de ponta para o seu sono, com garantia de qualidade e adaptação natural da coluna vertebral.",
+      "url": "https://castor-cabo-frio.com",
+      "telephone": "+55-22-99241-0112",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cabo Frio",
+        "addressRegion": "RJ",
+        "addressCountry": "BR"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Cabo Frio" },
+        { "@type": "City", "name": "Búzios" },
+        { "@type": "City", "name": "Arraial do Cabo" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://castor-cabo-frio.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual é a garantia dos colchões Castor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Todos os colchões Castor possuem 10 anos de garantia contra defeitos de fabricação. Além disso, oferecemos 100 noites de teste em casa para você se adaptar ao produto com total tranquilidade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo demora a adaptação ao colchão novo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A adaptação natural ao colchão Castor geralmente ocorre entre 15 a 30 dias. Nossos produtos são desenvolvidos com tecnologia que favorece a adaptação gradual da coluna vertebral, respeitando o tempo do seu corpo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês fazem entrega em toda Região dos Lagos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Realizamos entregas gratuitas em Cabo Frio, Búzios, Arraial do Cabo, São Pedro da Aldeia e Iguaba Grande. O prazo de entrega é de 3 a 7 dias úteis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso trocar o colchão se não me adaptar?",
+          "acceptedAnswer": {
+            "@type": "Answer", 
+            "text": "Absolutamente! Oferecemos 100 noites de teste em casa. Se dentro deste período você não se adaptar ao colchão, realizamos a troca gratuita por outro modelo."
+          }
+        }
+      ]
+    }
+  ]
+}

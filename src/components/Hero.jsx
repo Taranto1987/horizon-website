@@ -50,7 +50,7 @@ const Hero = ({ onOpenCalculator, onNavigate }) => {
               transition={{ delay: 0.4 }}
               className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl"
             >
-              Descubra o colchão Castor perfeito para sua coluna com nosso Mapa do Sono IA e aproveite condições exclusivas! Não deixe para depois – ofertas especiais e estoque limitado para você dormir melhor hoje.
+              Encontre o colchão Castor ideal para seu perfil com nossa tecnologia de ponta. Garantia de qualidade, adaptação natural da coluna e 100 noites para teste em casa. Condições especiais sujeitas a disponibilidade.
             </motion.p>
 
             <motion.div

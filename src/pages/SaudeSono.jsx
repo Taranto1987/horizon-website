@@ -18,14 +18,14 @@ const SaudeSono = () => {
     {
       icon: ShieldCheck,
       title: "Prevenindo Dores na Coluna com o Colchão Certo",
-      content: "A postura durante o sono é vital. Um colchão Castor com o suporte adequado (nem muito mole, nem muito duro) alinha a coluna vertebral, pescoço e quadris, prevenindo dores lombares, cervicais e problemas como hérnia de disco. A densidade correta para seu biotipo é fundamental.",
+      content: "A postura durante o sono é fundamental para a saúde da coluna. Um colchão Castor com suporte adequado pode favorecer o alinhamento da coluna vertebral, pescoço e quadris. A escolha da densidade correta para seu biotipo contribui para maior conforto durante o descanso.",
       image: "Diagrama da coluna vertebral alinhada em um colchão adequado",
       keywords: ["dor nas costas", "postura correta", "hérnia de disco", "densidade do colchão"]
     },
     {
       icon: AlertTriangle,
       title: "O Perigo da Obsolescência Programada em Colchões Baratos",
-      content: "Muitos colchões de baixa qualidade são projetados para durar pouco, perdendo o suporte rapidamente. Isso não só gera um custo maior a longo prazo, mas também pode agravar problemas de coluna e sono. Investir em um Castor é investir na sua saúde e durabilidade.",
+      content: "Produtos de baixa qualidade podem perder suporte mais rapidamente, comprometendo o conforto. Investir em um colchão Castor significa escolher durabilidade e tecnologia de ponta, com 10 anos de garantia contra defeitos de fabricação.",
       image: "Comparativo de um colchão Castor durável e um colchão barato desgastado",
       keywords: ["obsolescência programada", "colchão barato", "durabilidade", "investimento em saúde"]
     },
