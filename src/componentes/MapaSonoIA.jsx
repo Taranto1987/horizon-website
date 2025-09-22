@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Brain, User, Ruler, Weight, Calendar, AlertTriangle, Thermometer, Users, Activity, ShieldCheck, Target, DollarSign } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { rankear } from '../../algoritmo_castor/recommender.js';
+import { rankear } from '@/algoritmo_castor/recommender.js';
 
 const MapaSonoIA = ({ onRecommendation, produtos = [], precos = [], estoque = [] }) => {
   const [etapaAtual, setEtapaAtual] = useState(0);
